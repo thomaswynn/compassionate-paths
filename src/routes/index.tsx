@@ -235,8 +235,8 @@ function Home() {
 
       <footer className="border-t border-border bg-card">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-8 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
-          <p>© {new Date().getFullYear()} Revivify Foundation — The Revive Project</p>
-          <p>Advocacy and case support. Not a law firm; not legal advice.</p>
+          <p>© {new Date().getFullYear()} The Revive Project, LLC — California</p>
+          <p>Consulting and case support. Not a law firm; not legal or medical advice.</p>
         </div>
       </footer>
     </div>
