@@ -187,26 +187,25 @@ function Home() {
           <p className="rule-eyebrow">Resources</p>
           <h2 className="mt-4 text-3xl md:text-4xl">The Revive Project document library.</h2>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-            Templates, active-case folders, statutes, medical declaration forms, and business records
-            live in the Revive Project Google Drive. Families and volunteers can request access below.
+            Templates, elderly and medical parole fact sheets, advocacy letters, and case-building
+            guides — organized by category with direct downloads. Client case files stay private.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="https://drive.google.com/drive/folders/1PrePlauGhvB9FwShvxIaqo4nCNIdckB1"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/resources"
               className="rounded-sm bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
             >
-              Open the Revive Project Drive
-            </a>
+              Browse resources & downloads
+            </Link>
             <a
               href="#contact"
               className="rounded-sm border border-border px-6 py-3 text-sm font-medium transition-colors hover:bg-secondary"
             >
-              Request access
+              Request a document
             </a>
           </div>
         </section>
+
 
         <section id="contact" className="surface-warm">
           <div className="mx-auto max-w-3xl px-5 py-20 text-center">
