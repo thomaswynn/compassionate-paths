@@ -5,22 +5,10 @@ export type DriveFileLike = {
   modifiedTime?: string;
 };
 
-const GOOGLE_EXPORT: Record<string, { kind: string; exportMime: string; ext: string }> = {
-  "application/vnd.google-apps.document": {
-    kind: "Google Doc",
-    exportMime: "application/pdf",
-    ext: "pdf",
-  },
-  "application/vnd.google-apps.spreadsheet": {
-    kind: "Google Sheet",
-    exportMime: "application/pdf",
-    ext: "pdf",
-  },
-  "application/vnd.google-apps.presentation": {
-    kind: "Google Slides",
-    exportMime: "application/pdf",
-    ext: "pdf",
-  },
+const GOOGLE_EXPORT: Record<string, { kind: string; segment: string }> = {
+  "application/vnd.google-apps.document": { kind: "Google Doc", segment: "document" },
+  "application/vnd.google-apps.spreadsheet": { kind: "Google Sheet", segment: "spreadsheets" },
+  "application/vnd.google-apps.presentation": { kind: "Google Slides", segment: "presentation" },
 };
 
 const KIND_BY_MIME: Record<string, string> = {
@@ -41,7 +29,7 @@ export function describeFile(file: DriveFileLike) {
     modified: file.modifiedTime ?? null,
     viewUrl: `https://drive.google.com/file/d/${file.id}/view`,
     downloadUrl: google
-      ? `https://docs.google.com/document/d/${file.id}/export?format=${google.ext}`
+      ? `https://docs.google.com/${google.segment}/d/${file.id}/export?format=pdf`
       : `https://drive.google.com/uc?export=download&id=${file.id}`,
   };
 }
