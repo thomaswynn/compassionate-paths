@@ -14,7 +14,66 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      intake_submissions: {
+        Row: {
+          ada_condition: string
+          additional_notes: string | null
+          cdcr_number: string
+          contact_email: string
+          contact_phone: string
+          county_of_commitment: string
+          created_at: string
+          current_age: number | null
+          date_of_birth: string | null
+          family_contact_name: string
+          heard_about_us: string | null
+          id: string
+          inmate_full_name: string
+          medical_condition: string
+          prison_facility: string
+          relationship_to_inmate: string
+          year_of_incarceration: number | null
+        }
+        Insert: {
+          ada_condition: string
+          additional_notes?: string | null
+          cdcr_number: string
+          contact_email: string
+          contact_phone: string
+          county_of_commitment: string
+          created_at?: string
+          current_age?: number | null
+          date_of_birth?: string | null
+          family_contact_name: string
+          heard_about_us?: string | null
+          id?: string
+          inmate_full_name: string
+          medical_condition: string
+          prison_facility: string
+          relationship_to_inmate: string
+          year_of_incarceration?: number | null
+        }
+        Update: {
+          ada_condition?: string
+          additional_notes?: string | null
+          cdcr_number?: string
+          contact_email?: string
+          contact_phone?: string
+          county_of_commitment?: string
+          created_at?: string
+          current_age?: number | null
+          date_of_birth?: string | null
+          family_contact_name?: string
+          heard_about_us?: string | null
+          id?: string
+          inmate_full_name?: string
+          medical_condition?: string
+          prison_facility?: string
+          relationship_to_inmate?: string
+          year_of_incarceration?: number | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
