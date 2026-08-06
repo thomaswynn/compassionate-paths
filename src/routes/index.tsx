@@ -215,12 +215,20 @@ function Home() {
               Send the name, the facility, and what you know about the diagnosis. We respond to
               every message, usually within two business days.
             </p>
-            <a
-              href="mailto:help@revivifyfoundation.org"
-              className="mt-8 inline-block rounded-sm bg-accent px-7 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
-            >
-              help@revivifyfoundation.org
-            </a>
+            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+              <a
+                href="mailto:thereviveproject@gmail.com"
+                className="inline-block rounded-sm bg-accent px-7 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
+              >
+                thereviveproject@gmail.com
+              </a>
+              <a
+                href="tel:+15102896801"
+                className="inline-block rounded-sm border border-ink-foreground/30 px-7 py-3 text-sm font-semibold text-ink-foreground transition-colors hover:bg-ink-foreground/10"
+              >
+                (510) 289-6801
+              </a>
+            </div>
           </div>
         </section>
       </main>
