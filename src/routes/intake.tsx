@@ -38,9 +38,9 @@ function Field({
   error,
 }: {
   label: string;
-  hint?: string;
+  hint?: string | undefined;
   children: React.ReactNode;
-  error?: string;
+  error?: string | undefined;
 }) {
   return (
     <label className="block">
