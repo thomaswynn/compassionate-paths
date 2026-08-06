@@ -61,8 +61,8 @@ function Home() {
       <header className="sticky top-0 z-30 border-b border-border/70 bg-background/85 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
           <div className="leading-tight">
-            <p className="font-display text-lg font-semibold">Revivify Foundation</p>
-            <p className="rule-eyebrow">The Revive Project</p>
+            <p className="font-display text-lg font-semibold">The Revive Project, LLC</p>
+            <p className="rule-eyebrow">Compassionate Release Consulting</p>
           </div>
           <nav className="hidden gap-7 text-sm text-muted-foreground md:flex">
             <a className="transition-colors hover:text-foreground" href="#what-we-do">
