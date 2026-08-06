@@ -27,32 +27,32 @@ export const Route = createFileRoute("/")({
 const services = [
   {
     n: "01",
-    title: "Eligibility Review",
-    body: "We read the medical records, the sentence, and the statute together, then tell you plainly whether a compassionate release petition has a path forward.",
+    title: "Medical & ADA Documentation",
+    body: "We prepare the medical records, physician declarations, and ADA-related documentation that support compassionate release and medical parole petitions.",
   },
   {
     n: "02",
-    title: "Petition Preparation",
-    body: "Warden requests, BOP and state forms, physician declarations, and the exhaustion timeline — assembled, dated, and tracked so nothing lapses.",
+    title: "Petition & Legislative Outreach",
+    body: "Warden requests, state forms, exhaustion timelines, and constituent letters to legislators — assembled, dated, and tracked so nothing lapses.",
   },
   {
     n: "03",
-    title: "Release Plan Building",
-    body: "Courts ask where someone will live and who will care for them. We build the housing, hospice, and caregiver plan that answers that question.",
+    title: "Release Plan Coordination",
+    body: "We coordinate the practical plan courts and agencies need to see: housing, hospice, In-Home Supportive Services (IHSS), transportation, and caregiver arrangements.",
   },
   {
     n: "04",
-    title: "Family Support",
-    body: "Plain-language updates, help talking to counsel and case managers, and someone to call when the process stalls or the news gets hard.",
+    title: "Family Guidance",
+    body: "Plain-language updates, help communicating with counsel and case managers, and someone to call when the process stalls or the news gets hard.",
   },
 ];
 
 const steps = [
-  ["Intake", "You tell us the name, the facility, and the diagnosis. No cost, no obligation."],
-  ["Records", "We gather medical records, sentencing documents, and the disciplinary history."],
-  ["Request", "A formal reduction-in-sentence request goes to the warden, with the clock tracked."],
-  ["Filing", "If denied or ignored, the motion moves to the sentencing court with full support."],
-  ["Homecoming", "Housing, hospice, transport, and follow-up care arranged before the door opens."],
+  ["Intake", "You tell us the name, the facility, and the medical situation. No cost, no obligation."],
+  ["Records", "We gather medical records, sentencing documents, and the history needed for the petition."],
+  ["Request", "A formal compassionate release or medical parole request goes to the warden or agency, with the clock tracked."],
+  ["Filing", "If denied or ignored, the motion moves to the sentencing court with full supporting materials."],
+  ["Homecoming", "Housing, hospice, transport, IHSS, and follow-up care arranged before the door opens."],
 ];
 
 function Home() {
