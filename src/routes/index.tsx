@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import wheelchairElder from "@/assets/wheelchair-elder.jpg";
 import oxygenElder from "@/assets/oxygen-elder.jpg";
+import incarceratedElder from "@/assets/incarcerated-elder.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -75,12 +76,12 @@ function Home() {
               Resources
             </a>
           </nav>
-          <a
-            href="#contact"
+          <Link
+            to="/intake"
             className="rounded-sm bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
             Get Help
-          </a>
+          </Link>
         </div>
       </header>
 
@@ -99,12 +100,12 @@ function Home() {
                 release plan so a family can spend that time together instead of on hold.
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
-                <a
-                  href="#contact"
+                <Link
+                  to="/intake"
                   className="rounded-sm bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
                 >
                   Start a case review
-                </a>
+                </Link>
                 <a
                   href="#what-we-do"
                   className="rounded-sm border border-ink-foreground/30 px-6 py-3 text-sm font-medium text-ink-foreground transition-colors hover:bg-ink-foreground/10"
@@ -127,7 +128,7 @@ function Home() {
                 width={1280}
                 height={960}
                 loading="lazy"
-                className="mt-4 w-full rounded-sm object-cover shadow-soft md:absolute md:-bottom-14 md:-left-12 md:mt-0 md:w-1/2 md:border-4 md:border-ink"
+                className="mt-4 w-full rounded-sm object-cover shadow-soft md:absolute md:-bottom-14 md:-left-6 md:mt-0 md:w-1/2 md:border-4 md:border-ink"
               />
             </div>
           </div>
@@ -183,6 +184,53 @@ function Home() {
           </div>
         </section>
 
+        <section id="before-after" className="mx-auto max-w-6xl px-5 py-20">
+          <p className="rule-eyebrow">Why It Matters</p>
+          <h2 className="mt-4 max-w-2xl text-3xl md:text-4xl">
+            The same man, two very different rooms.
+          </h2>
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+            Terminally ill and permanently incapacitated people age out of any public-safety
+            argument long before the paperwork catches up. Compassionate release is the difference
+            between a cell and a window.
+          </p>
+          <div className="mt-10 grid gap-8 md:grid-cols-2">
+            <figure>
+              <img
+                src={incarceratedElder}
+                alt="An elderly man in a CDCR prison jumpsuit, handcuffed and shackled, seated in a wheelchair inside a cell block"
+                width={1280}
+                height={960}
+                loading="lazy"
+                className="w-full rounded-sm object-cover shadow-soft"
+              />
+              <figcaption className="mt-3">
+                <span className="rule-eyebrow text-accent">Before</span>
+                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                  Cuffed and shackled in a cell block, receiving care the facility was never built
+                  to give.
+                </p>
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src={wheelchairElder}
+                alt="The same elderly man at home in a wheelchair, looking out a sunlit window"
+                width={1280}
+                height={960}
+                loading="lazy"
+                className="w-full rounded-sm object-cover shadow-soft"
+              />
+              <figcaption className="mt-3">
+                <span className="rule-eyebrow text-accent">After</span>
+                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                  Home with family, in hospice or IHSS care, with a release plan already in place.
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section id="resources" className="mx-auto max-w-6xl px-5 py-20">
           <p className="rule-eyebrow">Resources</p>
           <h2 className="mt-4 text-3xl md:text-4xl">The Revive Project document library.</h2>
@@ -197,12 +245,12 @@ function Home() {
             >
               Browse resources & downloads
             </Link>
-            <a
-              href="#contact"
+            <Link
+              to="/intake"
               className="rounded-sm border border-border px-6 py-3 text-sm font-medium transition-colors hover:bg-secondary"
             >
-              Request a document
-            </a>
+              Start the intake form
+            </Link>
           </div>
         </section>
 
