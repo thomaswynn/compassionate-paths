@@ -76,12 +76,12 @@ function Home() {
               Resources
             </a>
           </nav>
-          <a
-            href="#contact"
+          <Link
+            to="/intake"
             className="rounded-sm bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
             Get Help
-          </a>
+          </Link>
         </div>
       </header>
 
@@ -100,12 +100,12 @@ function Home() {
                 release plan so a family can spend that time together instead of on hold.
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
-                <a
-                  href="#contact"
+                <Link
+                  to="/intake"
                   className="rounded-sm bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
                 >
                   Start a case review
-                </a>
+                </Link>
                 <a
                   href="#what-we-do"
                   className="rounded-sm border border-ink-foreground/30 px-6 py-3 text-sm font-medium text-ink-foreground transition-colors hover:bg-ink-foreground/10"
@@ -245,12 +245,12 @@ function Home() {
             >
               Browse resources & downloads
             </Link>
-            <a
-              href="#contact"
+            <Link
+              to="/intake"
               className="rounded-sm border border-border px-6 py-3 text-sm font-medium transition-colors hover:bg-secondary"
             >
-              Request a document
-            </a>
+              Start the intake form
+            </Link>
           </div>
         </section>
 
