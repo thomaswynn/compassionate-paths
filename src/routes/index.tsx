@@ -88,15 +88,15 @@ function Home() {
         <section className="surface-warm">
           <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 md:grid-cols-2 md:items-center md:py-24">
             <div>
-              <p className="rule-eyebrow text-ink-foreground/60">Compassionate Release Advocacy</p>
+              <p className="rule-eyebrow text-ink-foreground/60">California Compassionate Release Consulting</p>
               <h1 className="mt-5 text-4xl leading-[1.05] md:text-6xl">
                 No one should die in prison waiting on paperwork.
               </h1>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-foreground/75">
-                The Revive Project walks families and incarcerated people through compassionate
-                release — from the first medical record to the day someone comes home. We handle the
-                filings, the deadlines, and the release plan so a family can spend that time
-                together instead of on hold.
+                The Revive Project, LLC walks families and incarcerated people through compassionate
+                release and medical parole petitions — from the first medical record to the day someone
+                comes home. We prepare the documentation, track the deadlines, and coordinate the
+                release plan so a family can spend that time together instead of on hold.
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
                 <a
