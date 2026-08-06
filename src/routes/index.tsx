@@ -5,17 +5,17 @@ import oxygenElder from "@/assets/oxygen-elder.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Revivify Foundation | Compassionate Release Advocacy" },
+      { title: "The Revive Project, LLC | Compassionate Release Consulting" },
       {
         name: "description",
         content:
-          "The Revive Project helps terminally ill and aging incarcerated people and their families navigate the compassionate release process with dignity.",
+          "The Revive Project helps incarcerated people and their families navigate compassionate release and medical parole petitions in California.",
       },
-      { property: "og:title", content: "Revivify Foundation | Compassionate Release Advocacy" },
+      { property: "og:title", content: "The Revive Project, LLC | Compassionate Release Consulting" },
       {
         property: "og:description",
         content:
-          "Guidance, records, and advocacy for families pursuing compassionate release for a seriously ill or aging loved one.",
+          "Medical and ADA documentation, legislative outreach, and wraparound coordination for compassionate release and medical parole petitions.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
