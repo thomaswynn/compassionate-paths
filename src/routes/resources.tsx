@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { getDriveResources } from "@/lib/resources.functions";
+import type { ResourceCategory } from "@/lib/drive-categories";
+
 
 export const Route = createFileRoute("/resources")({
   head: () => ({

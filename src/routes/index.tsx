@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import wheelchairElder from "@/assets/wheelchair-elder.jpg";
 import oxygenElder from "@/assets/oxygen-elder.jpg";
 
