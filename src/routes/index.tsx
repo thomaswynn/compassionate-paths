@@ -187,12 +187,12 @@ function Home() {
           <p className="rule-eyebrow">Resources</p>
           <h2 className="mt-4 text-3xl md:text-4xl">The Revive Project document library.</h2>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-            Templates, statutes, medical declaration forms, and case research live in the Revivify
-            Foundation Google Drive. Families and volunteers can request access below.
+            Templates, active-case folders, statutes, medical declaration forms, and business records
+            live in the Revive Project Google Drive. Families and volunteers can request access below.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href="https://drive.google.com/drive/my-drive"
+              href="https://drive.google.com/drive/folders/1PrePlauGhvB9FwShvxIaqo4nCNIdckB1"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-sm bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
