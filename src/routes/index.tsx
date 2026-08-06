@@ -5,17 +5,17 @@ import oxygenElder from "@/assets/oxygen-elder.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Revivify Foundation | Compassionate Release Advocacy" },
+      { title: "The Revive Project, LLC | Compassionate Release Consulting" },
       {
         name: "description",
         content:
-          "The Revive Project helps terminally ill and aging incarcerated people and their families navigate the compassionate release process with dignity.",
+          "The Revive Project helps incarcerated people and their families navigate compassionate release and medical parole petitions in California.",
       },
-      { property: "og:title", content: "Revivify Foundation | Compassionate Release Advocacy" },
+      { property: "og:title", content: "The Revive Project, LLC | Compassionate Release Consulting" },
       {
         property: "og:description",
         content:
-          "Guidance, records, and advocacy for families pursuing compassionate release for a seriously ill or aging loved one.",
+          "Medical and ADA documentation, legislative outreach, and wraparound coordination for compassionate release and medical parole petitions.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -27,32 +27,32 @@ export const Route = createFileRoute("/")({
 const services = [
   {
     n: "01",
-    title: "Eligibility Review",
-    body: "We read the medical records, the sentence, and the statute together, then tell you plainly whether a compassionate release petition has a path forward.",
+    title: "Medical & ADA Documentation",
+    body: "We prepare the medical records, physician declarations, and ADA-related documentation that support compassionate release and medical parole petitions.",
   },
   {
     n: "02",
-    title: "Petition Preparation",
-    body: "Warden requests, BOP and state forms, physician declarations, and the exhaustion timeline — assembled, dated, and tracked so nothing lapses.",
+    title: "Petition & Legislative Outreach",
+    body: "Warden requests, state forms, exhaustion timelines, and constituent letters to legislators — assembled, dated, and tracked so nothing lapses.",
   },
   {
     n: "03",
-    title: "Release Plan Building",
-    body: "Courts ask where someone will live and who will care for them. We build the housing, hospice, and caregiver plan that answers that question.",
+    title: "Release Plan Coordination",
+    body: "We coordinate the practical plan courts and agencies need to see: housing, hospice, In-Home Supportive Services (IHSS), transportation, and caregiver arrangements.",
   },
   {
     n: "04",
-    title: "Family Support",
-    body: "Plain-language updates, help talking to counsel and case managers, and someone to call when the process stalls or the news gets hard.",
+    title: "Family Guidance",
+    body: "Plain-language updates, help communicating with counsel and case managers, and someone to call when the process stalls or the news gets hard.",
   },
 ];
 
 const steps = [
-  ["Intake", "You tell us the name, the facility, and the diagnosis. No cost, no obligation."],
-  ["Records", "We gather medical records, sentencing documents, and the disciplinary history."],
-  ["Request", "A formal reduction-in-sentence request goes to the warden, with the clock tracked."],
-  ["Filing", "If denied or ignored, the motion moves to the sentencing court with full support."],
-  ["Homecoming", "Housing, hospice, transport, and follow-up care arranged before the door opens."],
+  ["Intake", "You tell us the name, the facility, and the medical situation. No cost, no obligation."],
+  ["Records", "We gather medical records, sentencing documents, and the history needed for the petition."],
+  ["Request", "A formal compassionate release or medical parole request goes to the warden or agency, with the clock tracked."],
+  ["Filing", "If denied or ignored, the motion moves to the sentencing court with full supporting materials."],
+  ["Homecoming", "Housing, hospice, transport, IHSS, and follow-up care arranged before the door opens."],
 ];
 
 function Home() {
@@ -61,8 +61,8 @@ function Home() {
       <header className="sticky top-0 z-30 border-b border-border/70 bg-background/85 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
           <div className="leading-tight">
-            <p className="font-display text-lg font-semibold">Revivify Foundation</p>
-            <p className="rule-eyebrow">The Revive Project</p>
+            <p className="font-display text-lg font-semibold">The Revive Project, LLC</p>
+            <p className="rule-eyebrow">Compassionate Release Consulting</p>
           </div>
           <nav className="hidden gap-7 text-sm text-muted-foreground md:flex">
             <a className="transition-colors hover:text-foreground" href="#what-we-do">
@@ -88,15 +88,15 @@ function Home() {
         <section className="surface-warm">
           <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 md:grid-cols-2 md:items-center md:py-24">
             <div>
-              <p className="rule-eyebrow text-ink-foreground/60">Compassionate Release Advocacy</p>
+              <p className="rule-eyebrow text-ink-foreground/60">California Compassionate Release Consulting</p>
               <h1 className="mt-5 text-4xl leading-[1.05] md:text-6xl">
                 No one should die in prison waiting on paperwork.
               </h1>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-foreground/75">
-                The Revive Project walks families and incarcerated people through compassionate
-                release — from the first medical record to the day someone comes home. We handle the
-                filings, the deadlines, and the release plan so a family can spend that time
-                together instead of on hold.
+                The Revive Project, LLC walks families and incarcerated people through compassionate
+                release and medical parole petitions — from the first medical record to the day someone
+                comes home. We prepare the documentation, track the deadlines, and coordinate the
+                release plan so a family can spend that time together instead of on hold.
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
                 <a
@@ -137,8 +137,8 @@ function Home() {
           <dl className="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-5 py-12 md:grid-cols-4">
             {[
               ["Free", "Intake and eligibility review"],
-              ["30 days", "Statutory warden response window"],
-              ["50 states", "Plus federal BOP petitions"],
+              ["California", "State and CDCR petitions"],
+              ["Medical parole", "Elderly, terminally ill, permanently incapacitated"],
               ["1:1", "A real person on every case"],
             ].map(([big, small]) => (
               <div key={small}>
@@ -187,12 +187,12 @@ function Home() {
           <p className="rule-eyebrow">Resources</p>
           <h2 className="mt-4 text-3xl md:text-4xl">The Revive Project document library.</h2>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-            Templates, statutes, medical declaration forms, and case research live in the Revivify
-            Foundation Google Drive. Families and volunteers can request access below.
+            Templates, active-case folders, statutes, medical declaration forms, and business records
+            live in the Revive Project Google Drive. Families and volunteers can request access below.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href="https://drive.google.com/drive/my-drive"
+              href="https://drive.google.com/drive/folders/1PrePlauGhvB9FwShvxIaqo4nCNIdckB1"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-sm bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
@@ -215,20 +215,28 @@ function Home() {
               Send the name, the facility, and what you know about the diagnosis. We respond to
               every message, usually within two business days.
             </p>
-            <a
-              href="mailto:help@revivifyfoundation.org"
-              className="mt-8 inline-block rounded-sm bg-accent px-7 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
-            >
-              help@revivifyfoundation.org
-            </a>
+            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+              <a
+                href="mailto:thereviveproject@gmail.com"
+                className="inline-block rounded-sm bg-accent px-7 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
+              >
+                thereviveproject@gmail.com
+              </a>
+              <a
+                href="tel:+15102896801"
+                className="inline-block rounded-sm border border-ink-foreground/30 px-7 py-3 text-sm font-semibold text-ink-foreground transition-colors hover:bg-ink-foreground/10"
+              >
+                (510) 289-6801
+              </a>
+            </div>
           </div>
         </section>
       </main>
 
       <footer className="border-t border-border bg-card">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-8 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
-          <p>© {new Date().getFullYear()} Revivify Foundation — The Revive Project</p>
-          <p>Advocacy and case support. Not a law firm; not legal advice.</p>
+          <p>© {new Date().getFullYear()} The Revive Project, LLC — California</p>
+          <p>Consulting and case support. Not a law firm; not legal or medical advice.</p>
         </div>
       </footer>
     </div>
