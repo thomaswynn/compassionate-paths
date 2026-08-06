@@ -137,8 +137,8 @@ function Home() {
           <dl className="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-5 py-12 md:grid-cols-4">
             {[
               ["Free", "Intake and eligibility review"],
-              ["30 days", "Statutory warden response window"],
-              ["50 states", "Plus federal BOP petitions"],
+              ["California", "State and CDCR petitions"],
+              ["Medical parole", "Elderly, terminally ill, permanently incapacitated"],
               ["1:1", "A real person on every case"],
             ].map(([big, small]) => (
               <div key={small}>
