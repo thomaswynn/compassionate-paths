@@ -36,7 +36,7 @@ function formatDate(value: string | null) {
 }
 
 function Resources() {
-  const categories = Route.useLoaderData();
+  const categories = Route.useLoaderData() as ResourceCategory[];
 
   return (
     <div className="min-h-screen bg-background">
