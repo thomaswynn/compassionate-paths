@@ -158,10 +158,10 @@ function Resources() {
               Tell us the facility and the situation, and we'll send the right forms for your case.
             </p>
             <a
-              href="mailto:thereviveproject@gmail.com"
+              href="mailto:revivifyfoundation@gmail.com"
               className="mt-7 inline-block rounded-sm bg-accent px-7 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
             >
-              thereviveproject@gmail.com
+              revivifyfoundation@gmail.com
             </a>
           </div>
         </section>
