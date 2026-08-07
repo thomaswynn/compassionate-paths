@@ -75,10 +75,12 @@ function Home() {
             <Link className="transition-colors hover:text-foreground" to="/eligibility">
               Eligibility
             </Link>
-            <a className="transition-colors hover:text-foreground" href="#resources">
+            <Link className="transition-colors hover:text-foreground" to="/services">
+              Services
+            </Link>
+            <Link className="transition-colors hover:text-foreground" to="/resources">
               Resources
-            </a>
-
+            </Link>
           </nav>
           <Link
             to="/intake"

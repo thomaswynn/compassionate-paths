@@ -84,6 +84,20 @@ function Eligibility() {
             <p className="font-display text-lg font-semibold">The Revive Project, LLC</p>
             <p className="rule-eyebrow">Compassionate Release Consulting</p>
           </Link>
+          <nav className="hidden gap-7 text-sm text-muted-foreground md:flex">
+            <Link className="transition-colors hover:text-foreground" to="/">
+              Home
+            </Link>
+            <Link className="text-foreground transition-colors" to="/eligibility">
+              Eligibility
+            </Link>
+            <Link className="transition-colors hover:text-foreground" to="/services">
+              Services
+            </Link>
+            <Link className="transition-colors hover:text-foreground" to="/resources">
+              Resources
+            </Link>
+          </nav>
           <Link
             to="/intake"
             className="rounded-sm bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
