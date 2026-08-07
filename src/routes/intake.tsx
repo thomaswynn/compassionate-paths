@@ -111,6 +111,20 @@ function Intake() {
             <p className="font-display text-lg font-semibold">The Revive Project, LLC</p>
             <p className="rule-eyebrow">Compassionate Release Consulting</p>
           </Link>
+          <nav className="hidden gap-7 text-sm text-muted-foreground md:flex">
+            <Link className="transition-colors hover:text-foreground" to="/">
+              Home
+            </Link>
+            <Link className="transition-colors hover:text-foreground" to="/eligibility">
+              Eligibility
+            </Link>
+            <Link className="transition-colors hover:text-foreground" to="/services">
+              Services
+            </Link>
+            <Link className="transition-colors hover:text-foreground" to="/resources">
+              Resources
+            </Link>
+          </nav>
           <Link
             to="/"
             className="rounded-sm border border-border px-4 py-2 text-sm font-medium transition-colors hover:bg-secondary"
