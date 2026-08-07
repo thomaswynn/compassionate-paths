@@ -222,7 +222,7 @@ function Services() {
                 Start a free case review
               </Link>
               <a
-                href="mailto:thereviveproject@gmail.com"
+                href="mailto:revivifyfoundation@gmail.com"
                 className="inline-block rounded-sm border border-ink-foreground/30 px-7 py-3 text-sm font-semibold text-ink-foreground transition-colors hover:bg-ink-foreground/10"
               >
                 Email us instead
