@@ -72,9 +72,13 @@ function Home() {
             <a className="transition-colors hover:text-foreground" href="#process">
               Process
             </a>
+            <Link className="transition-colors hover:text-foreground" to="/eligibility">
+              Eligibility
+            </Link>
             <a className="transition-colors hover:text-foreground" href="#resources">
               Resources
             </a>
+
           </nav>
           <Link
             to="/intake"
