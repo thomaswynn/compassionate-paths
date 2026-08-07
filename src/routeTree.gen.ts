@@ -10,12 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as EligibilityRouteImport } from './routes/eligibility'
 import { Route as IntakeRouteImport } from './routes/intake'
 import { Route as ResourcesRouteImport } from './routes/resources'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EligibilityRoute = EligibilityRouteImport.update({
+  id: '/eligibility',
+  path: '/eligibility',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IntakeRoute = IntakeRouteImport.update({
@@ -31,30 +37,34 @@ const ResourcesRoute = ResourcesRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/eligibility': typeof EligibilityRoute
   '/intake': typeof IntakeRoute
   '/resources': typeof ResourcesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/eligibility': typeof EligibilityRoute
   '/intake': typeof IntakeRoute
   '/resources': typeof ResourcesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/eligibility': typeof EligibilityRoute
   '/intake': typeof IntakeRoute
   '/resources': typeof ResourcesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/intake' | '/resources'
+  fullPaths: '/' | '/eligibility' | '/intake' | '/resources'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/intake' | '/resources'
-  id: '__root__' | '/' | '/intake' | '/resources'
+  to: '/' | '/eligibility' | '/intake' | '/resources'
+  id: '__root__' | '/' | '/eligibility' | '/intake' | '/resources'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  EligibilityRoute: typeof EligibilityRoute
   IntakeRoute: typeof IntakeRoute
   ResourcesRoute: typeof ResourcesRoute
 }
@@ -66,6 +76,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/eligibility': {
+      id: '/eligibility'
+      path: '/eligibility'
+      fullPath: '/eligibility'
+      preLoaderRoute: typeof EligibilityRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/intake': {
@@ -87,6 +104,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  EligibilityRoute: EligibilityRoute,
   IntakeRoute: IntakeRoute,
   ResourcesRoute: ResourcesRoute,
 }
