@@ -250,6 +250,12 @@ function Home() {
               Browse resources & downloads
             </Link>
             <Link
+              to="/eligibility"
+              className="rounded-sm border border-border px-6 py-3 text-sm font-medium transition-colors hover:bg-secondary"
+            >
+              Check eligibility criteria
+            </Link>
+            <Link
               to="/intake"
               className="rounded-sm border border-border px-6 py-3 text-sm font-medium transition-colors hover:bg-secondary"
             >
@@ -257,6 +263,8 @@ function Home() {
             </Link>
           </div>
         </section>
+
+
 
 
         <section id="contact" className="surface-warm">
