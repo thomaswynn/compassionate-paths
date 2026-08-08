@@ -278,10 +278,10 @@ function Home() {
             </p>
             <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <a
-                href="mailto:thereviveproject@gmail.com"
+                href="mailto:revivifyfoundation.com"
                 className="inline-block rounded-sm bg-accent px-7 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
               >
-                thereviveproject@gmail.com
+                revivifyfooundation.com
               </a>
               <a
                 href="tel:+15102896801"
