@@ -171,7 +171,7 @@ function Intake() {
                 </p>
               )}
 
-              <form onSubmit={onSubmit} className="space-y-12" noValidate>
+              <form netlify onSubmit={onSubmit} className="space-y-12" noValidate>
                 <section className="space-y-6">
                   <SectionHeading n="01" title="Incarcerated individual" />
                   <div className="grid gap-6 md:grid-cols-2">
