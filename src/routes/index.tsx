@@ -278,7 +278,7 @@ function Home() {
             </p>
             <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <a
-                href="mailto:revivifyfoundation@gmailcom"
+                href="mailto:revivifyfoundation@gmail.com"
                 className="inline-block rounded-sm bg-accent px-7 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
               >
                 revivifyfoundation@gmail.com
