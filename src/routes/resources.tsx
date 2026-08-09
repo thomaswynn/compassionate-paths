@@ -1,8 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { getDriveResources } from "@/lib/resources.functions";
 import type { ResourceCategory } from "@/lib/drive-categories";
-
-
 export const Route = createFileRoute("/resources")({
   head: () => ({
     meta: [
@@ -25,7 +23,6 @@ export const Route = createFileRoute("/resources")({
   loader: () => getDriveResources(),
   component: Resources,
 });
-
 function formatDate(value: string | null) {
   if (!value) return null;
   return new Date(value).toLocaleDateString("en-US", {
@@ -34,10 +31,8 @@ function formatDate(value: string | null) {
     day: "numeric",
   });
 }
-
 function Resources() {
   const categories = Route.useLoaderData() as ResourceCategory[];
-
   return (
     <div className="min-h-screen bg-background">
       <header className="sticky top-0 z-30 border-b border-border/70 bg-background/85 backdrop-blur">
@@ -68,7 +63,6 @@ function Resources() {
           </Link>
         </div>
       </header>
-
       <main>
         <section className="surface-warm">
           <div className="mx-auto max-w-6xl px-5 py-16 md:py-20">
@@ -83,7 +77,6 @@ function Resources() {
             </p>
           </div>
         </section>
-
         <div className="mx-auto max-w-6xl space-y-16 px-5 py-16">
           {categories.map((cat) => (
             <section key={cat.id} id={cat.id}>
@@ -94,16 +87,7 @@ function Resources() {
                     {cat.blurb}
                   </p>
                 </div>
-                <a
-                  href={cat.folderUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-medium text-accent underline-offset-4 hover:underline"
-                >
-                  Open folder in Drive
-                </a>
               </div>
-
               {cat.items.length === 0 ? (
                 <p className="mt-6 rounded-sm border border-dashed border-border p-6 text-sm text-muted-foreground">
                   Nothing published in this category yet — check back soon, or{" "}
@@ -128,8 +112,7 @@ function Resources() {
                       <div className="flex flex-wrap gap-2">
                         <a
                           href={item.downloadUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          download
                           className="rounded-sm bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
                         >
                           Download
@@ -150,7 +133,6 @@ function Resources() {
             </section>
           ))}
         </div>
-
         <section className="border-t border-border bg-secondary/40">
           <div className="mx-auto max-w-3xl px-5 py-16 text-center">
             <h2 className="text-2xl md:text-3xl">Need a document that isn't here?</h2>
@@ -166,7 +148,6 @@ function Resources() {
           </div>
         </section>
       </main>
-
       <footer className="border-t border-border bg-card">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-8 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} The Revive Project, LLC — California</p>
