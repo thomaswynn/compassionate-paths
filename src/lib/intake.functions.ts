@@ -46,5 +46,36 @@ export const submitIntake = createServerFn({ method: "POST" })
       throw new Error("We could not save your intake form. Please call (510) 289-6801.");
     }
 
+    // Let the family/client know their submission was received. This runs
+    // after the insert above succeeds, and a failure here should not block
+    // the form submission since the data was already saved.
+    const resendApiKey = process.env["RESEND_API_KEY"];
+    if (resendApiKey) {
+      try {
+        await fetch("https://api.resend.com/emails", {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${resendApiKey}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            from: "The Revive Project <noreply@revivifyfoundation.com>",
+            to: data.contactEmail,
+            subject: "We received your intake form",
+            text: `Hi ${data.familyContactName},
+
+Thank you for submitting an intake form to The Revive Project on behalf of ${data.inmateFullName}. We've received your information, and someone from our team will be in touch within 1-2 business days.
+
+If you have any urgent questions in the meantime, you can reach us at (510) 289-6801.
+
+Thank you,
+The Revive Project`,
+          }),
+        });
+      } catch (emailError) {
+        console.error("Confirmation email failed to send", emailError);
+      }
+    }
+
     return { ok: true as const };
   });
