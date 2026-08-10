@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
+import reviveLogo from "@/assets/revive Phoenix.png";
 import { useServerFn } from "@tanstack/react-start";
 import { submitIntake } from "@/lib/intake.functions";
 import { intakeSchema } from "@/lib/intake-schema";
@@ -113,6 +114,9 @@ function Intake() {
             <p className="rule-eyebrow">Compassionate Release Consulting</p>
           </Link>
           <nav className="hidden gap-7 text-sm text-muted-foreground md:flex">
+            <Link className="transition-colors hover:text-foreground" to="/about">
+              About
+            </Link>
             <Link className="transition-colors hover:text-foreground" to="/">
               Home
             </Link>
@@ -351,9 +355,100 @@ function Intake() {
       </main>
 
       <footer className="border-t border-border bg-card">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-8 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
-          <p>© {new Date().getFullYear()} The Revive Project, LLC — California</p>
-          <p>Consulting and case support. Not a law firm; not legal or medical advice.</p>
+        <div className="mx-auto max-w-6xl px-5 py-12">
+          <div className="grid gap-10 md:grid-cols-4">
+            <div className="md:col-span-2">
+              <div className="flex items-center gap-4">
+                <img
+                  src={reviveLogo}
+                  alt="Revive Foundation seal"
+                  width={500}
+                  height={500}
+                  loading="lazy"
+                  className="h-16 w-16 shrink-0 object-contain"
+                />
+                <div className="leading-tight">
+                  <p className="font-display text-base font-semibold text-foreground">
+                    The Revive Project, LLC
+                  </p>
+                  <p className="rule-eyebrow">Compassionate Release Consulting</p>
+                </div>
+              </div>
+              <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
+                Re-entry and empowerment for elderly adults. We help California families navigate
+                compassionate release and medical parole — from the first medical record to the
+                day someone comes home.
+              </p>
+            </div>
+            <div>
+              <p className="rule-eyebrow">Contact</p>
+              <address className="mt-4 space-y-3 text-sm not-italic leading-relaxed text-muted-foreground">
+                <p>
+                  2509 Adeline St
+                  <br />
+                  Oakland, CA 94607
+                </p>
+                <p>
+                  <a className="transition-colors hover:text-foreground" href="tel:+15102896801">
+                    (510) 289-6801
+                  </a>
+                </p>
+                <p>
+                  <a
+                    className="transition-colors hover:text-foreground"
+                    href="mailto:revivifyfoundation@gmail.com"
+                  >
+                    revivifyfoundation@gmail.com
+                  </a>
+                </p>
+                <p>Monday – Friday, 8:00 AM – 5:00 PM PT</p>
+              </address>
+            </div>
+            <div>
+              <p className="rule-eyebrow">Site</p>
+              <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
+                <li>
+                  <Link className="transition-colors hover:text-foreground" to="/">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link className="transition-colors hover:text-foreground" to="/about">
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link className="transition-colors hover:text-foreground" to="/eligibility">
+                    Eligibility
+                  </Link>
+                </li>
+                <li>
+                  <Link className="transition-colors hover:text-foreground" to="/services">
+                    Services
+                  </Link>
+                </li>
+                <li>
+                  <Link className="transition-colors hover:text-foreground" to="/resources">
+                    Resources
+                  </Link>
+                </li>
+                <li>
+                  <Link className="transition-colors hover:text-foreground" to="/our-impact">
+                    Our Impact
+                  </Link>
+                </li>
+                <li>
+                  <Link className="transition-colors hover:text-foreground" to="/intake">
+                    Start Intake
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-10 flex flex-col gap-2 border-t border-border pt-6 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
+            <p>© {new Date().getFullYear()} The Revive Project, LLC — California</p>
+            <p>Consulting and case support. Not a law firm; not legal or medical advice.</p>
+          </div>
         </div>
       </footer>
     </div>
