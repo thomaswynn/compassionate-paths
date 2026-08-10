@@ -28,21 +28,31 @@ export const Route = createFileRoute("/")({
 const services = [
   {
     n: "01",
+    title: "Case Evaluation & Intake",
+    body: "Reviewing initial details to determine how we can help and whether a case qualifies for consideration.",
+  },
+  {
+    n: "02",
+    title: "Consulting & Guidance",
+    body: "Providing structured assistance, resources, and direction for families seeking compassionate release options.",
+  },
+  {
+    n: "03",
     title: "Medical & ADA Documentation",
     body: "We prepare the medical records, physician declarations, and ADA-related documentation that support compassionate release and medical parole petitions.",
   },
   {
-    n: "02",
+    n: "04",
     title: "Petition & Legislative Outreach",
     body: "Warden requests, state forms, exhaustion timelines, and constituent letters to legislators — assembled, dated, and tracked so nothing lapses.",
   },
   {
-    n: "03",
+    n: "05",
     title: "Release Plan Coordination",
     body: "We coordinate the practical plan courts and agencies need to see: housing, hospice, In-Home Supportive Services (IHSS), transportation, and caregiver arrangements.",
   },
   {
-    n: "04",
+    n: "06",
     title: "Family Guidance",
     body: "Plain-language updates, help communicating with counsel and case managers, and someone to call when the process stalls or the news gets hard.",
   },
@@ -161,6 +171,12 @@ function Home() {
           <h2 className="mt-4 max-w-2xl text-3xl md:text-4xl">
             Four kinds of help, from the first phone call to the ride home.
           </h2>
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+            The Revive Project, LLC provides compassionate release consulting and case support to
+            help families navigate the complex process of securing compassionate release for an
+            incarcerated loved one. Because navigating these legal and administrative pathways can
+            be overwhelming, our consulting and case support services generally assist with:
+          </p>
           <div className="mt-12 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2">
             {services.map((s) => (
               <article key={s.n} className="bg-card p-8">
@@ -265,9 +281,6 @@ function Home() {
             </Link>
           </div>
         </section>
-
-
-
 
         <section id="contact" className="surface-warm">
           <div className="mx-auto max-w-3xl px-5 py-20 text-center">
