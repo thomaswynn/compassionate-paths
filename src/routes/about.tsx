@@ -4,6 +4,7 @@ import withOfficial from "@/assets/IMG_20251211_180525_775.jpg";
 import oaklandVolunteers from "@/assets/IMG_20260122_193644.jpg";
 import capitolSteps from "../../IMG_20260423_091609_027.jpg";
 import summitPanel from "../../1000018914.jpg";
+import senatorMeeting from "../../Scott Wiener.png";
 import summitSister from "../../IMG_20260513_124617_485.jpg";
 import galleryEvent from "../../image.jpg";
 
@@ -60,6 +61,12 @@ const gallery = [
     alt: "The founder with attendees at the Restorative Justice Ministry Leadership Summit",
     caption: "Restorative Justice Ministry Leadership Summit.",
     span: "md:col-span-2",
+  },
+  {
+    src: senatorMeeting,
+    alt: "The founder of The Revive Project standing with California State Senator Scott Wiener",
+    caption: "With State Senator Scott Wiener.",
+    span: "md:row-span-2",
   },
   {
     src: summitSister,
@@ -203,7 +210,7 @@ function About() {
               else whose decisions land on the people I used to sit beside. Aging and dying in
               custody is a policy choice, and policy can be changed.
             </p>
-            <div className="mt-12 grid auto-rows-[110px] grid-cols-2 gap-3 sm:auto-rows-[125px] sm:grid-cols-4 md:auto-rows-[135px] md:grid-cols-5">
+            <div className="mt-12 grid auto-rows-[110px] grid-cols-2 gap-3 sm:auto-rows-[125px] sm:grid-cols-4 md:auto-rows-[135px] md:grid-cols-6">
               {gallery.map((photo) => (
                 <figure
                   key={photo.caption}
