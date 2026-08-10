@@ -220,7 +220,7 @@ function About() {
                     src={photo.src}
                     alt={photo.alt}
                     loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
                   />
                   <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 to-transparent p-4 text-xs leading-snug text-white">
                     {photo.caption}
