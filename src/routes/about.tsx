@@ -54,7 +54,7 @@ const gallery = [
     src: oaklandVolunteers,
     alt: "The founder with fellow volunteers at a community service event in Oakland",
     caption: "Volunteering with community partners in Oakland.",
-    span: "md:col-span-2 md:row-span-2",
+    span: "",
   },
   {
     src: cropVolunteers,
@@ -66,7 +66,7 @@ const gallery = [
     src: summitPanel,
     alt: "The founder with attendees at the Restorative Justice Ministry Leadership Summit",
     caption: "Restorative Justice Ministry Leadership Summit.",
-    span: "md:col-span-2",
+    span: "",
   },
   {
     src: summitSister,
@@ -84,7 +84,7 @@ const gallery = [
     src: withOfficial,
     alt: "The founder speaking with an elected official at a community reception",
     caption: "Bringing elder justice directly to elected officials.",
-    span: "md:col-span-2",
+    span: "",
   },
 ];
 
@@ -158,7 +158,7 @@ function About() {
                 alt="The founder of The Revive Project outside the California State Capitol during an advocacy day"
                 width={1280}
                 height={1700}
-                className="w-full rounded-sm object-cover shadow-soft"
+                className="mx-auto w-full max-w-sm rounded-sm object-cover shadow-soft"
               />
             </div>
           </div>
@@ -210,7 +210,7 @@ function About() {
               else whose decisions land on the people I used to sit beside. Aging and dying in
               custody is a policy choice, and policy can be changed.
             </p>
-            <div className="mt-12 grid auto-rows-[220px] grid-cols-1 gap-4 sm:grid-cols-2 md:auto-rows-[240px] md:grid-cols-4">
+            <div className="mt-12 grid auto-rows-[150px] grid-cols-2 gap-3 sm:auto-rows-[170px] sm:grid-cols-3 md:auto-rows-[180px] md:grid-cols-4 lg:grid-cols-5">
               {gallery.map((photo) => (
                 <figure
                   key={photo.caption}
@@ -222,7 +222,7 @@ function About() {
                     loading="lazy"
                     className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
                   />
-                  <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 to-transparent p-4 text-xs leading-snug text-white">
+                  <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-2.5 text-[11px] leading-tight text-white">
                     {photo.caption}
                   </figcaption>
                 </figure>
