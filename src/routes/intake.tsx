@@ -179,23 +179,23 @@ function Intake() {
                 </p>
               )}
 
-              <form netlify onSubmit={onSubmit} className="space-y-12" noValidate>
+              <form netlify autoComplete="off" onSubmit={onSubmit} className="space-y-12" noValidate>
                 <section className="space-y-6">
                   <SectionHeading n="01" title="Incarcerated individual" />
                   <div className="grid gap-6 md:grid-cols-2">
                     <Field label="Full name *" error={errors["inmateFullName"]}>
-                      <input name="inmateFullName" required maxLength={120} className={inputClass} />
+                      <input name="inmateFullName" autoComplete="off" data-lpignore="true" data-1p-ignore required maxLength={120} className={inputClass} />
                     </Field>
                     <Field
                       label="CDCR number *"
                       hint="California Department of Corrections & Rehabilitation number"
                       error={errors["cdcrNumber"]}
                     >
-                      <input name="cdcrNumber" required maxLength={30} className={inputClass} />
+                      <input name="cdcrNumber" autoComplete="off" data-lpignore="true" data-1p-ignore required maxLength={30} className={inputClass} />
                     </Field>
                     <Field label="Current age *" error={errors["currentAge"]}>
                       <input
-                        name="currentAge"
+                        name="currentAge" autoComplete="off" data-lpignore="true" data-1p-ignore
                         type="number"
                         min={18}
                         max={120}
@@ -204,7 +204,7 @@ function Intake() {
                       />
                     </Field>
                     <Field label="Date of birth *" error={errors["dateOfBirth"]}>
-                      <input name="dateOfBirth" type="date" required className={inputClass} />
+                      <input name="dateOfBirth" autoComplete="off" data-lpignore="true" data-1p-ignore type="date" required className={inputClass} />
                     </Field>
                     <Field
                       label="Year of incarceration *"
@@ -212,7 +212,7 @@ function Intake() {
                       error={errors["yearOfIncarceration"]}
                     >
                       <input
-                        name="yearOfIncarceration"
+                        name="yearOfIncarceration" autoComplete="off" data-lpignore="true" data-1p-ignore
                         type="number"
                         min={1940}
                         max={new Date().getFullYear()}
@@ -263,7 +263,7 @@ function Intake() {
                     error={errors["adaCondition"]}
                   >
                     <textarea
-                      name="adaCondition"
+                      name="adaCondition" autoComplete="off" data-lpignore="true" data-1p-ignore
                       required
                       rows={4}
                       maxLength={2000}
@@ -276,7 +276,7 @@ function Intake() {
                     error={errors["medicalCondition"]}
                   >
                     <textarea
-                      name="medicalCondition"
+                      name="medicalCondition" autoComplete="off" data-lpignore="true" data-1p-ignore
                       required
                       rows={4}
                       maxLength={2000}
@@ -289,21 +289,21 @@ function Intake() {
                   <SectionHeading n="03" title="Family & contact" />
                   <div className="grid gap-6 md:grid-cols-2">
                     <Field label="Your name *" error={errors["familyContactName"]}>
-                      <input name="familyContactName" required maxLength={120} className={inputClass} />
+                      <input name="familyContactName" autoComplete="off" data-lpignore="true" data-1p-ignore required maxLength={120} className={inputClass} />
                     </Field>
                     <Field label="Relationship to the individual *" error={errors["relationshipToInmate"]}>
                       <input
-                        name="relationshipToInmate"
+                        name="relationshipToInmate" autoComplete="off" data-lpignore="true" data-1p-ignore
                         required
                         maxLength={80}
                         className={inputClass}
                       />
                     </Field>
                     <Field label="Phone number *" error={errors["contactPhone"]}>
-                      <input name="contactPhone" type="tel" required maxLength={30} className={inputClass} />
+                      <input name="contactPhone" autoComplete="off" data-lpignore="true" data-1p-ignore type="tel" required maxLength={30} className={inputClass} />
                     </Field>
                     <Field label="Email address *" error={errors["contactEmail"]}>
-                      <input name="contactEmail" type="email" required maxLength={255} className={inputClass} />
+                      <input name="contactEmail" autoComplete="off" data-lpignore="true" data-1p-ignore type="email" required maxLength={255} className={inputClass} />
                     </Field>
                   </div>
                 </section>
@@ -321,7 +321,7 @@ function Intake() {
                     </select>
                   </Field>
                   <Field label="Additional notes or questions" error={errors["additionalNotes"]}>
-                    <textarea name="additionalNotes" rows={4} maxLength={4000} className={inputClass} />
+                    <textarea name="additionalNotes" autoComplete="off" data-lpignore="true" data-1p-ignore rows={4} maxLength={4000} className={inputClass} />
                   </Field>
                 </section>
 
