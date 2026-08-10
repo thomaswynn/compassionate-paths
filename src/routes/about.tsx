@@ -82,8 +82,8 @@ const gallery = [
   },
   {
     src: withOfficial,
-    alt: "The founder speaking with an elected official at a community reception",
-    caption: "Bringing elder justice directly to elected officials.",
+    alt: "The founder of The Revive Project with Steve Hilton at a community reception",
+    caption: "With Steve Hilton.",
     span: "",
   },
 ];
