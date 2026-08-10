@@ -210,7 +210,7 @@ function About() {
               else whose decisions land on the people I used to sit beside. Aging and dying in
               custody is a policy choice, and policy can be changed.
             </p>
-            <div className="mt-12 grid auto-rows-[150px] grid-cols-2 gap-3 sm:auto-rows-[170px] sm:grid-cols-3 md:auto-rows-[180px] md:grid-cols-4 lg:grid-cols-5">
+            <div className="mt-12 grid auto-rows-[150px] grid-cols-2 gap-3 sm:auto-rows-[170px] sm:grid-cols-3 md:auto-rows-[170px] md:grid-cols-3 lg:grid-cols-6">
               {gallery.map((photo) => (
                 <figure
                   key={photo.caption}
