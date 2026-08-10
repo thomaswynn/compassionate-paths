@@ -54,6 +54,9 @@ function Resources() {
             <Link className="text-foreground transition-colors" to="/resources">
               Resources
             </Link>
+            <Link className="transition-colors hover:text-foreground" to="/our-impact">
+              Our Impact
+            </Link>
           </nav>
           <Link
             to="/intake"
