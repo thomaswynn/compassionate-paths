@@ -60,7 +60,7 @@ const gallery = [
     src: cropVolunteers,
     alt: "The founder with a group of volunteers and county staff at a community event",
     caption: "Building relationships across county and community organizations.",
-    span: "md:col-span-2",
+    span: "md:row-span-2",
   },
   {
     src: summitPanel,
@@ -72,7 +72,7 @@ const gallery = [
     src: summitSister,
     alt: "The founder with a longtime prison ministry volunteer at the Restorative Justice Ministry Leadership Summit",
     caption: "With longtime allies in prison and re-entry ministry.",
-    span: "md:col-span-2",
+    span: "md:row-span-2",
   },
   {
     src: galleryEvent,
