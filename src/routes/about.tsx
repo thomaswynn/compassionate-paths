@@ -54,25 +54,25 @@ const gallery = [
     src: oaklandVolunteers,
     alt: "The founder with fellow volunteers at a community service event in Oakland",
     caption: "Volunteering with community partners in Oakland.",
-    span: "",
+    span: "sm:col-span-2 sm:row-span-2 md:col-span-2 md:row-span-2",
   },
   {
     src: cropVolunteers,
     alt: "The founder with a group of volunteers and county staff at a community event",
     caption: "Building relationships across county and community organizations.",
-    span: "",
+    span: "md:col-span-2",
   },
   {
     src: summitPanel,
     alt: "The founder with attendees at the Restorative Justice Ministry Leadership Summit",
     caption: "Restorative Justice Ministry Leadership Summit.",
-    span: "",
+    span: "md:col-span-2",
   },
   {
     src: summitSister,
     alt: "The founder with a longtime prison ministry volunteer at the Restorative Justice Ministry Leadership Summit",
     caption: "With longtime allies in prison and re-entry ministry.",
-    span: "",
+    span: "md:col-span-2",
   },
   {
     src: galleryEvent,
@@ -210,7 +210,7 @@ function About() {
               else whose decisions land on the people I used to sit beside. Aging and dying in
               custody is a policy choice, and policy can be changed.
             </p>
-            <div className="mt-12 grid auto-rows-[150px] grid-cols-2 gap-3 sm:auto-rows-[170px] sm:grid-cols-3 md:auto-rows-[170px] md:grid-cols-3 lg:grid-cols-6">
+            <div className="mt-12 grid auto-rows-[110px] grid-cols-2 gap-3 sm:auto-rows-[125px] sm:grid-cols-4 md:auto-rows-[135px] md:grid-cols-6">
               {gallery.map((photo) => (
                 <figure
                   key={photo.caption}
