@@ -1,8 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import wheelchairElder from "@/assets/wheelchair-elder.jpg";
 import oxygenElder from "@/assets/oxygen-elder.jpg";
-import reviveBefore from "@/assets/revive-before.png";
-import reviveAfter from "@/assets/revive-after.png";
+import incarceratedElder from "@/assets/incarcerated-elder.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -92,6 +91,9 @@ function Home() {
             <Link className="transition-colors hover:text-foreground" to="/resources">
               Resources
             </Link>
+            <Link className="transition-colors hover:text-foreground" to="/our-impact">
+              Our Impact
+            </Link>
           </nav>
           <Link
             to="/intake"
@@ -146,14 +148,6 @@ function Home() {
                 height={960}
                 loading="lazy"
                 className="mt-4 w-full rounded-sm object-cover shadow-soft md:absolute md:-bottom-14 md:-left-6 md:mt-0 md:w-1/2 md:border-4 md:border-ink"
-              />
-              <img
-                src={reviveBefore}
-                alt="An elderly man in a CDCR prison uniform walking slowly with a cane across the prison yard"
-                width={1280}
-                height={960}
-                loading="lazy"
-                className="mt-4 w-full rounded-sm object-cover shadow-soft md:absolute md:-top-10 md:-right-6 md:mt-0 md:w-1/2 md:border-4 md:border-ink"
               />
             </div>
           </div>
@@ -228,8 +222,8 @@ function Home() {
           <div className="mt-10 grid gap-8 md:grid-cols-2">
             <figure>
               <img
-                src={reviveBefore}
-                alt="An elderly man in a CDCR prison uniform, hunched over and walking slowly with a cane across the prison yard, razor wire fencing behind him"
+                src={incarceratedElder}
+                alt="An elderly man in a CDCR prison jumpsuit, handcuffed and shackled, seated in a wheelchair inside a cell block"
                 width={1280}
                 height={960}
                 loading="lazy"
@@ -245,8 +239,8 @@ function Home() {
             </figure>
             <figure>
               <img
-                src={reviveAfter}
-                alt="The same elderly man at home in a wheelchair on a porch, smiling and holding his infant grandson"
+                src={wheelchairElder}
+                alt="The same elderly man at home in a wheelchair, looking out a sunlit window"
                 width={1280}
                 height={960}
                 loading="lazy"
@@ -259,6 +253,14 @@ function Home() {
                 </p>
               </figcaption>
             </figure>
+          </div>
+          <div className="mt-8">
+            <Link
+              to="/our-impact"
+              className="rounded-sm border border-border px-6 py-3 text-sm font-medium transition-colors hover:bg-secondary"
+            >
+              Read another family's story
+            </Link>
           </div>
         </section>
 
