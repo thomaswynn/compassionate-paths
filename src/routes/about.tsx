@@ -51,16 +51,10 @@ const milestones = [
 
 const gallery = [
   {
-    src: capitolSteps,
-    alt: "The founder of The Revive Project standing outside the California State Capitol in Sacramento during an advocacy day",
-    caption: "Advocacy day at the California State Capitol, Sacramento.",
-    span: "md:col-span-2 md:row-span-2",
-  },
-  {
     src: oaklandVolunteers,
     alt: "The founder with fellow volunteers at a community service event in Oakland",
     caption: "Volunteering with community partners in Oakland.",
-    span: "",
+    span: "md:col-span-2 md:row-span-2",
   },
   {
     src: cropVolunteers,
@@ -158,32 +152,14 @@ function About() {
                 </Link>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div>
               <img
                 src={capitolSteps}
                 alt="The founder of The Revive Project outside the California State Capitol during an advocacy day"
                 width={1280}
                 height={1700}
-                className="col-span-2 w-full rounded-sm object-cover shadow-soft"
-              />
-              <img
-                src={withOfficial}
-                alt="The founder speaking with an elected official at a community reception"
-                width={1280}
-                height={960}
-                loading="lazy"
                 className="w-full rounded-sm object-cover shadow-soft"
               />
-              <div className="flex items-center justify-center rounded-sm border border-ink-foreground/15 bg-background/60 p-5">
-                <img
-                  src={reviveLogo}
-                  alt="Revive Foundation seal — Re-Entry and Empowerment for Elderly Adults"
-                  width={500}
-                  height={500}
-                  loading="lazy"
-                  className="w-full max-w-[160px] object-contain"
-                />
-              </div>
             </div>
           </div>
         </section>
