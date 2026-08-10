@@ -118,6 +118,9 @@ function Services() {
             <Link className="transition-colors hover:text-foreground" to="/resources">
               Resources
             </Link>
+            <Link className="transition-colors hover:text-foreground" to="/our-impact">
+              Our Impact
+            </Link>
           </nav>
           <Link
             to="/intake"
