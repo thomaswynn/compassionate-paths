@@ -90,7 +90,7 @@ function Intake() {
     setStatus("sending");
     try {
       await send({ data: parsed.data });
-            fetch("https://formspree.io/f/maewnojj", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(parsed.data) }).catch(() => {});
+      fetch("https://formspree.io/f/maewnojj", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(parsed.data) }).catch(() => {});
       setStatus("done");
       form.reset();
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -124,6 +124,9 @@ function Intake() {
             </Link>
             <Link className="transition-colors hover:text-foreground" to="/resources">
               Resources
+            </Link>
+            <Link className="transition-colors hover:text-foreground" to="/our-impact">
+              Our Impact
             </Link>
           </nav>
           <Link
