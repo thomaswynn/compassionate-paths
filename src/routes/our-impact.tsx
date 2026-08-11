@@ -152,7 +152,7 @@ function OurImpact() {
           <div className="grid gap-10 md:grid-cols-4">
             <div className="md:col-span-2">
               <div className="flex items-center gap-4">
-                <img
+              <img
                   src={reviveLogo}
                   alt="Revive Foundation seal"
                   width={500}
