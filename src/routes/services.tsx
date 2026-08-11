@@ -5,15 +5,9 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Services | The Revive Project, LLC" },
-      {
-        name: "description",
-        content: "Compassionate release consulting services for elderly and medically ill incarcerated people in California.",
-      },
+      { name: "description", content: "Compassionate release consulting services for elderly and medically ill incarcerated people in California." },
       { property: "og:title", content: "Services | The Revive Project, LLC" },
-      {
-        property: "og:description",
-        content: "Medical documentation, legislative outreach, and wraparound services for compassionate release petitions.",
-      },
+      { property: "og:description", content: "Medical documentation, legislative outreach, and wraparound services for compassionate release petitions." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -22,35 +16,12 @@ export const Route = createFileRoute("/services")({
 });
 
 const services = [
-  {
-    title: "Free Phone Consultation",
-    description: "Discuss your loved one's case with our team. We review medical history, sentencing, and circumstances to assess eligibility.",
-  },
-  {
-    title: "Medical File Review",
-    description: "We examine existing medical records and identify gaps. $350 for comprehensive assessment.",
-    price: "$350",
-  },
-  {
-    title: "Medical Documentation",
-    description: "Work with physicians to create detailed documentation connecting medical conditions to compassionate release criteria.",
-    price: "$750–$1,200",
-  },
-  {
-    title: "Legislative Outreach",
-    description: "Contact state senators and assembly members to add your loved one to constituent watch lists.",
-    price: "$500",
-  },
-  {
-    title: "Wraparound Services",
-    description: "Research community resources: transportation, IHSS (In-Home Supportive Services), hospice care planning.",
-    price: "$600–$1,000",
-  },
-  {
-    title: "Full-Service Package",
-    description: "Complete support from intake through court proceedings. Includes all services above.",
-    price: "$3,000–$5,000",
-  },
+  { title: "Free Phone Consultation", description: "Discuss your loved one's case with our team. We review medical history, sentencing, and circumstances to assess eligibility." },
+  { title: "Medical File Review", description: "We examine existing medical records and identify gaps. $350 for comprehensive assessment.", price: "$350" },
+  { title: "Medical Documentation", description: "Work with physicians to create detailed documentation connecting medical conditions to compassionate release criteria.", price: "$750–$1,200" },
+  { title: "Legislative Outreach", description: "Contact state senators and assembly members to add your loved one to constituent watch lists.", price: "$500" },
+  { title: "Wraparound Services", description: "Research community resources: transportation, IHSS (In-Home Supportive Services), hospice care planning.", price: "$600–$1,000" },
+  { title: "Full-Service Package", description: "Complete support from intake through court proceedings. Includes all services above.", price: "$3,000–$5,000" },
 ];
 
 function Services() {
@@ -132,7 +103,7 @@ function Services() {
           <div className="grid gap-10 md:grid-cols-4">
             <div className="md:col-span-2">
               <div className="flex items-center gap-4">
-               <img src={reviveLogo} alt="Revive Foundation seal" width={500} height={500} loading="lazy" style={{ height: '72px', width: '72px' }} className="shrink-0 object-contain" />
+                <img src={reviveLogo} alt="Revive Foundation seal" width={500} height={500} loading="lazy" style={{ height: '72px', width: '72px' }} className="shrink-0 object-contain" />
                 <div className="leading-tight">
                   <p className="font-display text-lg font-semibold text-foreground">The Revive Project, LLC</p>
                   <p className="rule-eyebrow">Compassionate Release Consulting</p>
