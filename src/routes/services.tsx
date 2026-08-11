@@ -84,7 +84,7 @@ function Services() {
         </section>
 
         <section className="mx-auto max-w-4xl px-5 py-12">
-          <img src="/before_after_white_prisoner.jpg" alt="Before and after compassionate release documentation" className="w-full rounded-lg shadow-lg" />
+          <img src="/before after white prisoner.jpg" alt="Before and after compassionate release documentation" className="w-full rounded-lg shadow-lg" />
         </section>
 
         <section className="mx-auto max-w-6xl px-5 py-16">
