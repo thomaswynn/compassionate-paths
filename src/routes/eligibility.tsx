@@ -84,7 +84,7 @@ function Eligibility() {
           <div className="grid gap-10 md:grid-cols-4">
             <div className="md:col-span-2">
               <div className="flex items-center gap-4">
-                <img src={reviveLogo} alt="Revive Foundation seal" width={500} height={500} loading="lazy" style={{ height: '72px', width: '72px' }} className="shrink-0 object-contain" />
+                <img src={reviveLogo} alt="Revive Foundation seal" width={500} height={500} loading="lazy" style={{ height: '86px', width: '86px' }} className="shrink-0 object-contain" />
                 <div className="leading-tight">
                   <p className="font-display text-lg font-semibold text-foreground">The Revive Project, LLC</p>
                   <p className="rule-eyebrow">Compassionate Release Consulting</p>
