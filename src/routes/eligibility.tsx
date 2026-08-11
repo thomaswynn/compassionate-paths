@@ -50,31 +50,14 @@ function Eligibility() {
             <p className="rule-eyebrow">Compassionate Release Consulting</p>
           </Link>
           <nav className="hidden gap-7 text-sm text-muted-foreground md:flex">
-            <Link className="transition-colors hover:text-foreground" to="/about">
-              About
-            </Link>
-            <Link className="transition-colors hover:text-foreground" to="/">
-              Home
-            </Link>
-            <Link className="text-foreground transition-colors" to="/eligibility">
-              Eligibility
-            </Link>
-            <Link className="transition-colors hover:text-foreground" to="/services">
-              Services
-            </Link>
-            <Link className="transition-colors hover:text-foreground" to="/resources">
-              Resources
-            </Link>
-            <Link className="transition-colors hover:text-foreground" to="/our-impact">
-              Our Impact
-            </Link>
+            <Link className="transition-colors hover:text-foreground" to="/about">About</Link>
+            <Link className="transition-colors hover:text-foreground" to="/">Home</Link>
+            <Link className="text-foreground transition-colors" to="/eligibility">Eligibility</Link>
+            <Link className="transition-colors hover:text-foreground" to="/services">Services</Link>
+            <Link className="transition-colors hover:text-foreground" to="/resources">Resources</Link>
+            <Link className="transition-colors hover:text-foreground" to="/our-impact">Our Impact</Link>
           </nav>
-          <Link
-            to="/intake"
-            className="rounded-sm bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-          >
-            Get Help
-          </Link>
+          <Link to="/intake" className="rounded-sm bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90">Get Help</Link>
         </div>
       </header>
 
@@ -82,21 +65,13 @@ function Eligibility() {
         <section className="surface-warm">
           <div className="mx-auto max-w-4xl px-5 py-16 md:py-20">
             <p className="rule-eyebrow text-ink-foreground/60">Who Qualifies</p>
-            <h1 className="mt-5 text-5xl leading-[1.08] md:text-6xl">
-              Eligibility criteria for compassionate release.
-            </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-foreground/75">
-              Compassionate release is available to California incarcerated people who meet specific medical, age, or rehabilitative criteria. We help families understand whether their loved one might qualify.
-            </p>
+            <h1 className="mt-5 text-5xl leading-[1.08] md:text-6xl">Eligibility criteria for compassionate release.</h1>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-foreground/75">Compassionate release is available to California incarcerated people who meet specific medical, age, or rehabilitative criteria. We help families understand whether their loved one might qualify.</p>
           </div>
         </section>
 
         <section className="mx-auto max-w-4xl px-5 py-12">
-          <img 
-            src="/Group of old men inprison.png" 
-            alt="Group of elderly men in prison showing compassion and community"
-            className="w-full rounded-lg shadow-lg"
-          />
+          <img src="/Group of old men inprison.png" alt="Group of elderly men in prison showing compassion and community" className="w-full rounded-lg shadow-lg" />
         </section>
 
         <section className="mx-auto max-w-6xl px-5 py-16">
@@ -113,22 +88,10 @@ function Eligibility() {
         <section className="mx-auto max-w-4xl px-5 py-16">
           <div className="rounded-sm bg-secondary/40 p-8">
             <h2 className="text-3xl md:text-4xl">Not sure if your loved one qualifies?</h2>
-            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              Start with our free phone consultation. We'll review the medical history, sentencing details, and circumstances to tell you honestly whether a compassionate release petition has a reasonable chance.
-            </p>
+            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">Start with our free phone consultation. We'll review the medical history, sentencing details, and circumstances to tell you honestly whether a compassionate release petition has a reasonable chance.</p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <Link
-                to="/intake"
-                className="inline-block rounded-sm bg-accent px-7 py-3 text-base font-semibold text-accent-foreground transition-opacity hover:opacity-90"
-              >
-                Start a free case review
-              </Link>
-              
-                href="mailto:revivifyfoundation@gmail.com"
-                className="inline-block rounded-sm border border-ink-foreground/30 px-7 py-3 text-base font-semibold text-ink-foreground transition-colors hover:bg-ink-foreground/10"
-              >
-                Email us
-              </a>
+              <Link to="/intake" className="inline-block rounded-sm bg-accent px-7 py-3 text-base font-semibold text-accent-foreground transition-opacity hover:opacity-90">Start a free case review</Link>
+              <a href="mailto:revivifyfoundation@gmail.com" className="inline-block rounded-sm border border-ink-foreground/30 px-7 py-3 text-base font-semibold text-ink-foreground transition-colors hover:bg-ink-foreground/10">Email us</a>
             </div>
           </div>
         </section>
@@ -139,89 +102,33 @@ function Eligibility() {
           <div className="grid gap-10 md:grid-cols-4">
             <div className="md:col-span-2">
               <div className="flex items-center gap-4">
-                <img
-                  src={reviveLogo}
-                  alt="Revive Foundation seal"
-                  width={500}
-                  height={500}
-                  loading="lazy"
-                  className="h-18 w-18 shrink-0 object-contain"
-                />
+                <img src={reviveLogo} alt="Revive Foundation seal" width={500} height={500} loading="lazy" className="h-18 w-18 shrink-0 object-contain" />
                 <div className="leading-tight">
-                  <p className="font-display text-lg font-semibold text-foreground">
-                    The Revive Project, LLC
-                  </p>
+                  <p className="font-display text-lg font-semibold text-foreground">The Revive Project, LLC</p>
                   <p className="rule-eyebrow">Compassionate Release Consulting</p>
                 </div>
               </div>
-              <p className="mt-5 max-w-sm text-base leading-relaxed text-muted-foreground">
-                Re-entry and empowerment for elderly adults. We help California families navigate
-                compassionate release and medical parole — from the first medical record to the
-                day someone comes home.
-              </p>
+              <p className="mt-5 max-w-sm text-base leading-relaxed text-muted-foreground">Re-entry and empowerment for elderly adults. We help California families navigate compassionate release and medical parole — from the first medical record to the day someone comes home.</p>
             </div>
             <div>
               <p className="rule-eyebrow">Contact</p>
               <address className="mt-4 space-y-3 text-base not-italic leading-relaxed text-muted-foreground">
-                <p>
-                  2509 Adeline St
-                  <br />
-                  Oakland, CA 94607
-                </p>
-                <p>
-                  <a className="transition-colors hover:text-foreground" href="tel:+15102896801">
-                    (510) 289-6801
-                  </a>
-                </p>
-                <p>
-                  
-                    className="transition-colors hover:text-foreground"
-                    href="mailto:revivifyfoundation@gmail.com"
-                  >
-                    revivifyfoundation@gmail.com
-                  </a>
-                </p>
+                <p>2509 Adeline St<br />Oakland, CA 94607</p>
+                <p><a className="transition-colors hover:text-foreground" href="tel:+15102896801">(510) 289-6801</a></p>
+                <p><a className="transition-colors hover:text-foreground" href="mailto:revivifyfoundation@gmail.com">revivifyfoundation@gmail.com</a></p>
                 <p>Monday – Friday, 8:00 AM – 5:00 PM PT</p>
               </address>
             </div>
             <div>
               <p className="rule-eyebrow">Site</p>
               <ul className="mt-4 space-y-3 text-base text-muted-foreground">
-                <li>
-                  <Link className="transition-colors hover:text-foreground" to="/">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link className="transition-colors hover:text-foreground" to="/about">
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link className="transition-colors hover:text-foreground" to="/eligibility">
-                    Eligibility
-                  </Link>
-                </li>
-                <li>
-                  <Link className="transition-colors hover:text-foreground" to="/services">
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link className="transition-colors hover:text-foreground" to="/resources">
-                    Resources
-                  </Link>
-                </li>
-                <li>
-                  <Link className="transition-colors hover:text-foreground" to="/our-impact">
-                    Our Impact
-                  </Link>
-                </li>
-                <li>
-                  <Link className="transition-colors hover:text-foreground" to="/intake">
-                    Start Intake
-                  </Link>
-                </li>
+                <li><Link className="transition-colors hover:text-foreground" to="/">Home</Link></li>
+                <li><Link className="transition-colors hover:text-foreground" to="/about">About</Link></li>
+                <li><Link className="transition-colors hover:text-foreground" to="/eligibility">Eligibility</Link></li>
+                <li><Link className="transition-colors hover:text-foreground" to="/services">Services</Link></li>
+                <li><Link className="transition-colors hover:text-foreground" to="/resources">Resources</Link></li>
+                <li><Link className="transition-colors hover:text-foreground" to="/our-impact">Our Impact</Link></li>
+                <li><Link className="transition-colors hover:text-foreground" to="/intake">Start Intake</Link></li>
               </ul>
             </div>
           </div>
