@@ -7,14 +7,12 @@ export const Route = createFileRoute("/services")({
       { title: "Services | The Revive Project, LLC" },
       {
         name: "description",
-        content:
-          "Compassionate release consulting services for elderly and medically ill incarcerated people in California.",
+        content: "Compassionate release consulting services for elderly and medically ill incarcerated people in California.",
       },
       { property: "og:title", content: "Services | The Revive Project, LLC" },
       {
         property: "og:description",
-        content:
-          "Medical documentation, legislative outreach, and wraparound services for compassionate release petitions.",
+        content: "Medical documentation, legislative outreach, and wraparound services for compassionate release petitions.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -26,37 +24,31 @@ export const Route = createFileRoute("/services")({
 const services = [
   {
     title: "Free Phone Consultation",
-    description:
-      "Discuss your loved one's case with our team. We review medical history, sentencing, and circumstances to assess eligibility.",
+    description: "Discuss your loved one's case with our team. We review medical history, sentencing, and circumstances to assess eligibility.",
   },
   {
     title: "Medical File Review",
-    description:
-      "We examine existing medical records and identify gaps. $350 for comprehensive assessment.",
+    description: "We examine existing medical records and identify gaps. $350 for comprehensive assessment.",
     price: "$350",
   },
   {
     title: "Medical Documentation",
-    description:
-      "Work with physicians to create detailed documentation connecting medical conditions to compassionate release criteria.",
+    description: "Work with physicians to create detailed documentation connecting medical conditions to compassionate release criteria.",
     price: "$750–$1,200",
   },
   {
     title: "Legislative Outreach",
-    description:
-      "Contact state senators and assembly members to add your loved one to constituent watch lists.",
+    description: "Contact state senators and assembly members to add your loved one to constituent watch lists.",
     price: "$500",
   },
   {
     title: "Wraparound Services",
-    description:
-      "Research community resources: transportation, IHSS (In-Home Supportive Services), hospice care planning.",
+    description: "Research community resources: transportation, IHSS (In-Home Supportive Services), hospice care planning.",
     price: "$600–$1,000",
   },
   {
     title: "Full-Service Package",
-    description:
-      "Complete support from intake through court proceedings. Includes all services above.",
+    description: "Complete support from intake through court proceedings. Includes all services above.",
     price: "$3,000–$5,000",
   },
 ];
@@ -71,31 +63,14 @@ function Services() {
             <p className="rule-eyebrow">Compassionate Release Consulting</p>
           </Link>
           <nav className="hidden gap-7 text-sm text-muted-foreground md:flex">
-            <Link className="transition-colors hover:text-foreground" to="/about">
-              About
-            </Link>
-            <Link className="transition-colors hover:text-foreground" to="/">
-              Home
-            </Link>
-            <Link className="transition-colors hover:text-foreground" to="/eligibility">
-              Eligibility
-            </Link>
-            <Link className="text-foreground transition-colors" to="/services">
-              Services
-            </Link>
-            <Link className="transition-colors hover:text-foreground" to="/resources">
-              Resources
-            </Link>
-            <Link className="transition-colors hover:text-foreground" to="/our-impact">
-              Our Impact
-            </Link>
+            <Link className="transition-colors hover:text-foreground" to="/about">About</Link>
+            <Link className="transition-colors hover:text-foreground" to="/">Home</Link>
+            <Link className="transition-colors hover:text-foreground" to="/eligibility">Eligibility</Link>
+            <Link className="text-foreground transition-colors" to="/services">Services</Link>
+            <Link className="transition-colors hover:text-foreground" to="/resources">Resources</Link>
+            <Link className="transition-colors hover:text-foreground" to="/our-impact">Our Impact</Link>
           </nav>
-          <Link
-            to="/intake"
-            className="rounded-sm bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-          >
-            Get Help
-          </Link>
+          <Link to="/intake" className="rounded-sm bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90">Get Help</Link>
         </div>
       </header>
 
@@ -103,21 +78,13 @@ function Services() {
         <section className="surface-warm">
           <div className="mx-auto max-w-4xl px-5 py-16 md:py-20">
             <p className="rule-eyebrow text-ink-foreground/60">Our Services</p>
-            <h1 className="mt-5 text-5xl leading-[1.08] md:text-6xl">
-              Compassionate release consulting designed for your family.
-            </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-foreground/75">
-              We handle the medical documentation, legislative advocacy, and wraparound services so your loved one has the best chance at compassionate release.
-            </p>
+            <h1 className="mt-5 text-5xl leading-[1.08] md:text-6xl">Compassionate release consulting designed for your family.</h1>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-foreground/75">We handle the medical documentation, legislative advocacy, and wraparound services so your loved one has the best chance at compassionate release.</p>
           </div>
         </section>
 
         <section className="mx-auto max-w-4xl px-5 py-12">
-          <img 
-            src="/before_after_white_prisoner.jpg" 
-            alt="Before and after compassionate release documentation"
-            className="w-full rounded-lg shadow-lg"
-          />
+          <img src="/before_after_white_prisoner.jpg" alt="Before and after compassionate release documentation" className="w-full rounded-lg shadow-lg" />
         </section>
 
         <section className="mx-auto max-w-6xl px-5 py-16">
@@ -151,22 +118,10 @@ function Services() {
         <section className="mx-auto max-w-4xl px-5 py-16">
           <div className="rounded-sm bg-secondary/40 p-8">
             <h2 className="text-3xl md:text-4xl">Ready to explore options?</h2>
-            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              Call us for a free consultation. We'll listen to your situation and tell you honestly whether compassionate release is a viable path.
-            </p>
+            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">Call us for a free consultation. We'll listen to your situation and tell you honestly whether compassionate release is a viable path.</p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <Link
-                to="/intake"
-                className="inline-block rounded-sm bg-accent px-7 py-3 text-base font-semibold text-accent-foreground transition-opacity hover:opacity-90"
-              >
-                Start intake process
-              </Link>
-              
-                href="tel:+15102896801"
-                className="inline-block rounded-sm border border-ink-foreground/30 px-7 py-3 text-base font-semibold text-ink-foreground transition-colors hover:bg-ink-foreground/10"
-              >
-                Call (510) 289-6801
-              </a>
+              <Link to="/intake" className="inline-block rounded-sm bg-accent px-7 py-3 text-base font-semibold text-accent-foreground transition-opacity hover:opacity-90">Start intake process</Link>
+              <a href="tel:+15102896801" className="inline-block rounded-sm border border-ink-foreground/30 px-7 py-3 text-base font-semibold text-ink-foreground transition-colors hover:bg-ink-foreground/10">Call (510) 289-6801</a>
             </div>
           </div>
         </section>
@@ -177,89 +132,33 @@ function Services() {
           <div className="grid gap-10 md:grid-cols-4">
             <div className="md:col-span-2">
               <div className="flex items-center gap-4">
-                <img
-                  src={reviveLogo}
-                  alt="Revive Foundation seal"
-                  width={500}
-                  height={500}
-                  loading="lazy"
-                  className="h-18 w-18 shrink-0 object-contain"
-                />
+                <img src={reviveLogo} alt="Revive Foundation seal" width={500} height={500} loading="lazy" className="h-18 w-18 shrink-0 object-contain" />
                 <div className="leading-tight">
-                  <p className="font-display text-lg font-semibold text-foreground">
-                    The Revive Project, LLC
-                  </p>
+                  <p className="font-display text-lg font-semibold text-foreground">The Revive Project, LLC</p>
                   <p className="rule-eyebrow">Compassionate Release Consulting</p>
                 </div>
               </div>
-              <p className="mt-5 max-w-sm text-base leading-relaxed text-muted-foreground">
-                Re-entry and empowerment for elderly adults. We help California families navigate
-                compassionate release and medical parole — from the first medical record to the
-                day someone comes home.
-              </p>
+              <p className="mt-5 max-w-sm text-base leading-relaxed text-muted-foreground">Re-entry and empowerment for elderly adults. We help California families navigate compassionate release and medical parole — from the first medical record to the day someone comes home.</p>
             </div>
             <div>
               <p className="rule-eyebrow">Contact</p>
               <address className="mt-4 space-y-3 text-base not-italic leading-relaxed text-muted-foreground">
-                <p>
-                  2509 Adeline St
-                  <br />
-                  Oakland, CA 94607
-                </p>
-                <p>
-                  <a className="transition-colors hover:text-foreground" href="tel:+15102896801">
-                    (510) 289-6801
-                  </a>
-                </p>
-                <p>
-                  
-                    className="transition-colors hover:text-foreground"
-                    href="mailto:revivifyfoundation@gmail.com"
-                  >
-                    revivifyfoundation@gmail.com
-                  </a>
-                </p>
+                <p>2509 Adeline St<br />Oakland, CA 94607</p>
+                <p><a className="transition-colors hover:text-foreground" href="tel:+15102896801">(510) 289-6801</a></p>
+                <p><a className="transition-colors hover:text-foreground" href="mailto:revivifyfoundation@gmail.com">revivifyfoundation@gmail.com</a></p>
                 <p>Monday – Friday, 8:00 AM – 5:00 PM PT</p>
               </address>
             </div>
             <div>
               <p className="rule-eyebrow">Site</p>
               <ul className="mt-4 space-y-3 text-base text-muted-foreground">
-                <li>
-                  <Link className="transition-colors hover:text-foreground" to="/">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link className="transition-colors hover:text-foreground" to="/about">
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link className="transition-colors hover:text-foreground" to="/eligibility">
-                    Eligibility
-                  </Link>
-                </li>
-                <li>
-                  <Link className="transition-colors hover:text-foreground" to="/services">
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link className="transition-colors hover:text-foreground" to="/resources">
-                    Resources
-                  </Link>
-                </li>
-                <li>
-                  <Link className="transition-colors hover:text-foreground" to="/our-impact">
-                    Our Impact
-                  </Link>
-                </li>
-                <li>
-                  <Link className="transition-colors hover:text-foreground" to="/intake">
-                    Start Intake
-                  </Link>
-                </li>
+                <li><Link className="transition-colors hover:text-foreground" to="/">Home</Link></li>
+                <li><Link className="transition-colors hover:text-foreground" to="/about">About</Link></li>
+                <li><Link className="transition-colors hover:text-foreground" to="/eligibility">Eligibility</Link></li>
+                <li><Link className="transition-colors hover:text-foreground" to="/services">Services</Link></li>
+                <li><Link className="transition-colors hover:text-foreground" to="/resources">Resources</Link></li>
+                <li><Link className="transition-colors hover:text-foreground" to="/our-impact">Our Impact</Link></li>
+                <li><Link className="transition-colors hover:text-foreground" to="/intake">Start Intake</Link></li>
               </ul>
             </div>
           </div>
