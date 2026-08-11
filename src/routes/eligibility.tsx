@@ -5,15 +5,9 @@ export const Route = createFileRoute("/eligibility")({
   head: () => ({
     meta: [
       { title: "Eligibility | The Revive Project, LLC" },
-      {
-        name: "description",
-        content: "Learn who qualifies for compassionate release in California. Elderly adults and serious illness criteria.",
-      },
+      { name: "description", content: "Learn who qualifies for compassionate release in California. Elderly adults and serious illness criteria." },
       { property: "og:title", content: "Eligibility | The Revive Project, LLC" },
-      {
-        property: "og:description",
-        content: "Compassionate release eligibility criteria in California for elderly and medically ill incarcerated adults.",
-      },
+      { property: "og:description", content: "Compassionate release eligibility criteria in California for elderly and medically ill incarcerated adults." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -22,22 +16,10 @@ export const Route = createFileRoute("/eligibility")({
 });
 
 const criteria = [
-  {
-    title: "Age & Long Sentence",
-    body: "You are 60+ years old and have already served 30+ years.",
-  },
-  {
-    title: "Serious Medical Illness",
-    body: "You have a terminal illness (prognosis <18 months), advanced dementia, or a chronic condition making incarceration unsafe.",
-  },
-  {
-    title: "Significant Rehabilitation",
-    body: "You have shown genuine change: education, programming, zero disciplinary infractions, and community plans.",
-  },
-  {
-    title: "Low Risk to Public Safety",
-    body: "You have no current gang affiliations, no violent history, and strong family or community ties.",
-  },
+  { title: "Age & Long Sentence", body: "You are 60+ years old and have already served 30+ years." },
+  { title: "Serious Medical Illness", body: "You have a terminal illness (prognosis <18 months), advanced dementia, or a chronic condition making incarceration unsafe." },
+  { title: "Significant Rehabilitation", body: "You have shown genuine change: education, programming, zero disciplinary infractions, and community plans." },
+  { title: "Low Risk to Public Safety", body: "You have no current gang affiliations, no violent history, and strong family or community ties." },
 ];
 
 function Eligibility() {
@@ -102,7 +84,8 @@ function Eligibility() {
           <div className="grid gap-10 md:grid-cols-4">
             <div className="md:col-span-2">
               <div className="flex items-center gap-4">
-                <img src={reviveLogo} alt="Revive Foundation seal" width={500} height={500} loading="lazy" style={{ height: '72px', width: '72px' }} className="shrink-0 object-contain"/>
+                <img src={reviveLogo} alt="Revive Foundation seal" width={500} height={500} loading="lazy" style={{ height: '72px', width: '72px' }} className="shrink-0 object-contain" />
+                <div className="leading-tight">
                   <p className="font-display text-lg font-semibold text-foreground">The Revive Project, LLC</p>
                   <p className="rule-eyebrow">Compassionate Release Consulting</p>
                 </div>
