@@ -139,36 +139,38 @@ function Services() {
         <section className="surface-warm">
           <div className="mx-auto max-w-4xl px-5 py-16 md:py-20">
             <p className="rule-eyebrow text-ink-foreground/60">Services & Pricing</p>
-            <h1 className="mt-5 text-4xl leading-[1.08] md:text-5xl">
+            <h1 className="mt-5 text-5xl leading-[1.08] md:text-6xl">
               Clear help, clear pricing.
             </h1>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-ink-foreground/75">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-foreground/75">
               Every case is different, but the work is the same: review the medical history, build
               the documentation, open the right doors, and coordinate a safe release plan. Start
               with a free consultation and add only what you need.
             </p>
           </div>
         </section>
-<section className="mx-auto max-w-4xl px-5 py-12">
+
+        <section className="mx-auto max-w-4xl px-5 py-12">
           <img 
             src="/before after white prisoner.jpg" 
             alt="Before and after compassionate release results"
             className="w-full rounded-lg shadow-lg"
           />
         </section>
+
         <section className="mx-auto max-w-6xl px-5 py-16">
           <div className="grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
               <article key={s.n} className="bg-card p-7">
                 <div className="flex items-baseline justify-between">
                   <span className="rule-eyebrow text-accent">{s.n}</span>
-                  <span className="font-display text-2xl text-foreground">{s.price}</span>
+                  <span className="font-display text-3xl text-foreground">{s.price}</span>
                 </div>
-                <h2 className="mt-4 text-xl">{s.title}</h2>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.body}</p>
+                <h2 className="mt-4 text-2xl">{s.title}</h2>
+                <p className="mt-3 text-base leading-relaxed text-muted-foreground">{s.body}</p>
                 <ul className="mt-5 space-y-2">
                   {s.includes.map((item) => (
-                    <li key={item} className="flex gap-2 text-sm text-muted-foreground">
+                    <li key={item} className="flex gap-2 text-base text-muted-foreground">
                       <span aria-hidden="true" className="text-accent">
                         ✓
                       </span>
@@ -180,7 +182,7 @@ function Services() {
             ))}
           </div>
 
-          <p className="mt-6 text-xs leading-relaxed text-muted-foreground">
+          <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
             * Phone consultation is complimentary. If you proceed with a Medical File Review, the
             consultation fee is waived. Payment plans are available for the Full-Service Package.
           </p>
@@ -189,7 +191,7 @@ function Services() {
         <section className="border-y border-border bg-secondary/40">
           <div className="mx-auto max-w-4xl px-5 py-16">
             <p className="rule-eyebrow">How It Works</p>
-            <h2 className="mt-4 text-2xl md:text-3xl">Three ways to work with us.</h2>
+            <h2 className="mt-4 text-3xl md:text-4xl">Three ways to work with us.</h2>
             <ol className="mt-10 space-y-8">
               {[
                 ["Start free", "Book a phone consultation. Tell us the facility, the medical situation, and what you have tried so far."],
@@ -199,8 +201,8 @@ function Services() {
                 <li key={title} className="flex gap-5">
                   <span className="font-display text-2xl text-accent">{i + 1}</span>
                   <div>
-                    <h3 className="text-lg">{title}</h3>
-                    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{body}</p>
+                    <h3 className="text-xl">{title}</h3>
+                    <p className="mt-1 text-base leading-relaxed text-muted-foreground">{body}</p>
                   </div>
                 </li>
               ))}
@@ -209,12 +211,12 @@ function Services() {
         </section>
 
         <section className="mx-auto max-w-4xl px-5 py-16">
-          <h2 className="text-2xl md:text-3xl">Common questions.</h2>
+          <h2 className="text-3xl md:text-4xl">Common questions.</h2>
           <dl className="mt-10 space-y-8">
             {faqs.map((faq) => (
               <div key={faq.q}>
-                <dt className="text-base font-semibold text-foreground">{faq.q}</dt>
-                <dd className="mt-2 text-sm leading-relaxed text-muted-foreground">{faq.a}</dd>
+                <dt className="text-lg font-semibold text-foreground">{faq.q}</dt>
+                <dd className="mt-2 text-base leading-relaxed text-muted-foreground">{faq.a}</dd>
               </div>
             ))}
           </dl>
@@ -222,21 +224,21 @@ function Services() {
 
         <section className="surface-warm">
           <div className="mx-auto max-w-3xl px-5 py-16 text-center">
-            <h2 className="text-2xl md:text-3xl">Not sure which service fits?</h2>
-            <p className="mt-4 text-base leading-relaxed text-ink-foreground/75">
+            <h2 className="text-3xl md:text-4xl">Not sure which service fits?</h2>
+            <p className="mt-4 text-lg leading-relaxed text-ink-foreground/75">
               Start with a free consultation. We'll tell you honestly what your loved one's case
               needs — and what it doesn't.
             </p>
             <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <Link
                 to="/intake"
-                className="inline-block rounded-sm bg-accent px-7 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
+                className="inline-block rounded-sm bg-accent px-7 py-3 text-base font-semibold text-accent-foreground transition-opacity hover:opacity-90"
               >
                 Start a free case review
               </Link>
               <a
                 href="mailto:revivifyfoundation@gmail.com"
-                className="inline-block rounded-sm border border-ink-foreground/30 px-7 py-3 text-sm font-semibold text-ink-foreground transition-colors hover:bg-ink-foreground/10"
+                className="inline-block rounded-sm border border-ink-foreground/30 px-7 py-3 text-base font-semibold text-ink-foreground transition-colors hover:bg-ink-foreground/10"
               >
                 Email us instead
               </a>
@@ -256,16 +258,16 @@ function Services() {
                   width={500}
                   height={500}
                   loading="lazy"
-                  className="h-16 w-16 shrink-0 object-contain"
+                  className="h-18 w-18 shrink-0 object-contain"
                 />
                 <div className="leading-tight">
-                  <p className="font-display text-base font-semibold text-foreground">
+                  <p className="font-display text-lg font-semibold text-foreground">
                     The Revive Project, LLC
                   </p>
                   <p className="rule-eyebrow">Compassionate Release Consulting</p>
                 </div>
               </div>
-              <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
+              <p className="mt-5 max-w-sm text-base leading-relaxed text-muted-foreground">
                 Re-entry and empowerment for elderly adults. We help California families navigate
                 compassionate release and medical parole — from the first medical record to the
                 day someone comes home.
@@ -273,7 +275,7 @@ function Services() {
             </div>
             <div>
               <p className="rule-eyebrow">Contact</p>
-              <address className="mt-4 space-y-3 text-sm not-italic leading-relaxed text-muted-foreground">
+              <address className="mt-4 space-y-3 text-base not-italic leading-relaxed text-muted-foreground">
                 <p>
                   2509 Adeline St
                   <br />
@@ -297,7 +299,7 @@ function Services() {
             </div>
             <div>
               <p className="rule-eyebrow">Site</p>
-              <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
+              <ul className="mt-4 space-y-3 text-base text-muted-foreground">
                 <li>
                   <Link className="transition-colors hover:text-foreground" to="/">
                     Home
@@ -336,7 +338,7 @@ function Services() {
               </ul>
             </div>
           </div>
-          <div className="mt-10 flex flex-col gap-2 border-t border-border pt-6 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
+          <div className="mt-10 flex flex-col gap-2 border-t border-border pt-6 text-base text-muted-foreground md:flex-row md:items-center md:justify-between">
             <p>© {new Date().getFullYear()} The Revive Project, LLC — California</p>
             <p>Consulting and case support. Not a law firm; not legal or medical advice.</p>
           </div>
