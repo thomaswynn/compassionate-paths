@@ -279,33 +279,11 @@ const criteria = [
   {
     title: "Low Risk to Public Safety",
     body: "You have no current gang affiliations, no violent history, and strong family or community ties.",
-    example: "Rosa, 70, has been a model prisoner and her daughter is prepared to provide housing and care.",
+    example: "Rosa, 70, has been a model prisoner and her daughter is prepared to provide housing and care. She is ADA in a wheelchair and needs help with getting out of bed, changing shoes, sheets and getting into clothes",
   },
 ];
 
-const examples = [
-  {
-    name: "James",
-    age: 65,
-    sentence: "Life (30 years served)",
-    reason: "Elderly, good behavior, strong family support",
-    outcome: "Released on compassionate grounds",
-  },
-  {
-    name: "Maria",
-    age: 68,
-    sentence: "25 years (20 years served)",
-    reason: "Terminal cancer diagnosis, supportive family",
-    outcome: "Released to hospice care",
-  },
-  {
-    name: "Robert",
-    age: 72,
-    sentence: "Life (40 years served)",
-    reason: "Advanced dementia, no violent history",
-    outcome: "Released to memory care facility",
-  },
-];
+
 
 function Eligibility() {
   return (
@@ -380,29 +358,7 @@ function Eligibility() {
           </div>
         </section>
 
-        <section className="border-y border-border bg-secondary/40">
-          <div className="mx-auto max-w-4xl px-5 py-16">
-            <p className="rule-eyebrow">Real Cases</p>
-            <h2 className="mt-4 text-3xl md:text-4xl">People we've helped come home.</h2>
-            <div className="mt-10 space-y-6">
-              {examples.map((person) => (
-                <div key={person.name} className="rounded-sm border border-border bg-card p-6">
-                  <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                    <div>
-                      <h3 className="text-xl font-semibold">{person.name}, {person.age}</h3>
-                      <p className="mt-1 text-base text-muted-foreground">{person.sentence}</p>
-                      <p className="mt-2 text-base leading-relaxed">{person.reason}</p>
-                    </div>
-                    <div className="rounded-sm bg-accent/10 px-4 py-3 text-center">
-                      <p className="text-sm font-semibold text-muted-foreground">OUTCOME</p>
-                      <p className="mt-1 text-base font-semibold text-accent">{person.outcome}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+       
 
         <section className="mx-auto max-w-4xl px-5 py-16">
           <div className="rounded-sm bg-secondary/40 p-8">
