@@ -333,7 +333,8 @@ function Home() {
                   width={500}
                   height={500}
                   loading="lazy"
-                  className="h-16 w-16 shrink-0 object-contain"
+                  style={{ height: '120px', width: '120px' }}
+                  className="shrink-0 object-contain"
                 />
                 <div className="leading-tight">
                   <p className="font-display text-base font-semibold text-foreground">
