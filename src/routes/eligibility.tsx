@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+—––©—import { createFileRoute, Link } from "@tanstack/react-router";
 import reviveLogo from "@/assets/revive Phoenix.png";
 
 export const Route = createFileRoute("/eligibility")({
