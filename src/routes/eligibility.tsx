@@ -71,7 +71,7 @@ function Eligibility() {
         </section>
 
         <section className="mx-auto max-w-4xl px-5 py-12">
-          <img src="/Group of old men inprison.png" alt="Group of elderly men in prison showing compassion and community" className="w-full rounded-lg shadow-lg" />
+          <img src="/Group_of_old_men_inprison.png" alt="Group of elderly men in prison showing compassion and community" className="w-full rounded-lg shadow-lg" />
         </section>
 
         <section className="mx-auto max-w-6xl px-5 py-16">
