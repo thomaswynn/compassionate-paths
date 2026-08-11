@@ -4,17 +4,17 @@ import reviveLogo from "@/assets/revive Phoenix.png";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services & Pricing | The Revive Project, LLC" },
+      { title: "Services | The Revive Project, LLC" },
       {
         name: "description",
         content:
-          "Transparent pricing for compassionate release consulting: free phone consultation, medical file review, documentation, legislative outreach, wraparound services, and full-service packages.",
+          "Compassionate release consulting services for elderly and medically ill incarcerated people in California.",
       },
-      { property: "og:title", content: "Services & Pricing | The Revive Project, LLC" },
+      { property: "og:title", content: "Services | The Revive Project, LLC" },
       {
         property: "og:description",
         content:
-          "Free consultation. Medical file review, documentation, legislative outreach, wraparound planning, and full-service compassionate release support in California.",
+          "Medical documentation, legislative outreach, and wraparound services for compassionate release petitions.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -25,75 +25,39 @@ export const Route = createFileRoute("/services")({
 
 const services = [
   {
-    n: "01",
-    title: "Phone Consultation",
-    price: "FREE*",
-    range: null,
-    body: "A no-pressure first call. We listen to the situation, explain the pathways, and tell you honestly whether a case is worth pursuing. The fee is waived when you move forward with a Medical File Review.",
-    includes: ["15–30 minute intake call", "Pathway screening", "Honest readiness assessment"],
+    title: "Free Phone Consultation",
+    description:
+      "Discuss your loved one's case with our team. We review medical history, sentencing, and circumstances to assess eligibility.",
   },
   {
-    n: "02",
     title: "Medical File Review",
+    description:
+      "We examine existing medical records and identify gaps. $350 for comprehensive assessment.",
     price: "$350",
-    range: null,
-    body: "We read the medical records, sentencing documents, and facility history to identify the strongest compassionate release or medical parole argument for your loved one.",
-    includes: ["Record and timeline review", "Eligibility memo", "Recommended next steps"],
   },
   {
-    n: "03",
     title: "Medical Documentation",
+    description:
+      "Work with physicians to create detailed documentation connecting medical conditions to compassionate release criteria.",
     price: "$750–$1,200",
-    range: true,
-    body: "We prepare the detailed medical packet that connects a diagnosis to the legal criteria — physician declarations, care summaries, and the supporting exhibits petitions need.",
-    includes: ["Physician-style declarations", "Condition-to-criteria mapping", "Exhibit organization"],
   },
   {
-    n: "04",
     title: "Legislative Outreach",
+    description:
+      "Contact state senators and assembly members to add your loved one to constituent watch lists.",
     price: "$500",
-    range: null,
-    body: "We contact the California state senator and assembly member for the district of commitment and ask that your loved one be added to constituent watch lists during review.",
-    includes: ["District identification", "Constituent letters", "Follow-up tracking"],
   },
   {
-    n: "05",
     title: "Wraparound Services",
+    description:
+      "Research community resources: transportation, IHSS (In-Home Supportive Services), hospice care planning.",
     price: "$600–$1,000",
-    range: true,
-    body: "We build the practical release plan courts and agencies expect to see: housing, hospice, In-Home Supportive Services (IHSS), transportation, and caregiver arrangements.",
-    includes: ["Housing and hospice coordination", "IHSS application guidance", "Transport and caregiver plan"],
   },
   {
-    n: "06",
     title: "Full-Service Package",
+    description:
+      "Complete support from intake through court proceedings. Includes all services above.",
     price: "$3,000–$5,000",
-    range: true,
-    body: "End-to-end support from the first phone call through the court proceeding. Medical review, documentation, legislative outreach, wraparound planning, and ongoing case coordination.",
-    includes: [
-      "Everything in individual services",
-      "Dedicated case coordinator",
-      "Court-filing support and proceeding attendance",
-    ],
-  },
-];
-
-const faqs = [
-  {
-    q: "Do you charge for the first call?",
-    a: "No. The phone consultation is free. If you choose to proceed with a Medical File Review, the consultation fee is waived.",
-  },
-  {
-    q: "Are these legal fees?",
-    a: "No. The Revive Project, LLC provides consulting and case-support services. We are not a law firm and do not give legal advice. Many families use our work alongside an attorney.",
-  },
-  {
-    q: "Why is there a price range on some services?",
-    a: "Range pricing reflects how complex the medical history is and how many records need review. We quote a fixed price after the Medical File Review.",
-  },
-  {
-    q: "Can I start with just one service?",
-    a: "Yes. Most families begin with the free consultation and Medical File Review, then add only the services they need.",
   },
 ];
 
@@ -138,14 +102,12 @@ function Services() {
       <main>
         <section className="surface-warm">
           <div className="mx-auto max-w-4xl px-5 py-16 md:py-20">
-            <p className="rule-eyebrow text-ink-foreground/60">Services & Pricing</p>
+            <p className="rule-eyebrow text-ink-foreground/60">Our Services</p>
             <h1 className="mt-5 text-5xl leading-[1.08] md:text-6xl">
-              Clear help, clear pricing.
+              Compassionate release consulting designed for your family.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-foreground/75">
-              Every case is different, but the work is the same: review the medical history, build
-              the documentation, open the right doors, and coordinate a safe release plan. Start
-              with a free consultation and add only what you need.
+              We handle the medical documentation, legislative advocacy, and wraparound services so your loved one has the best chance at compassionate release.
             </p>
           </div>
         </section>
@@ -153,94 +115,57 @@ function Services() {
         <section className="mx-auto max-w-4xl px-5 py-12">
           <img 
             src="/before_after_white_prisoner.jpg" 
-            alt="Before and after compassionate release results"
+            alt="Before and after compassionate release documentation"
             className="w-full rounded-lg shadow-lg"
           />
         </section>
 
         <section className="mx-auto max-w-6xl px-5 py-16">
-          <div className="grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
-            {services.map((s) => (
-              <article key={s.n} className="bg-card p-7">
-                <div className="flex items-baseline justify-between">
-                  <span className="rule-eyebrow text-accent">{s.n}</span>
-                  <span className="font-display text-3xl text-foreground">{s.price}</span>
-                </div>
-                <h2 className="mt-4 text-2xl">{s.title}</h2>
-                <p className="mt-3 text-base leading-relaxed text-muted-foreground">{s.body}</p>
-                <ul className="mt-5 space-y-2">
-                  {s.includes.map((item) => (
-                    <li key={item} className="flex gap-2 text-base text-muted-foreground">
-                      <span aria-hidden="true" className="text-accent">
-                        ✓
-                      </span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+          <div className="grid gap-8 md:grid-cols-2">
+            {services.map((service, i) => (
+              <article key={i} className="rounded-sm border border-border bg-card p-7">
+                <h2 className="text-2xl font-semibold">{service.title}</h2>
+                <p className="mt-3 text-base leading-relaxed text-muted-foreground">{service.description}</p>
+                {service.price && (
+                  <p className="mt-4 text-lg font-semibold text-accent">{service.price}</p>
+                )}
               </article>
             ))}
           </div>
-
-          <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
-            * Phone consultation is complimentary. If you proceed with a Medical File Review, the
-            consultation fee is waived. Payment plans are available for the Full-Service Package.
-          </p>
         </section>
 
-        <section className="border-y border-border bg-secondary/40">
-          <div className="mx-auto max-w-4xl px-5 py-16">
-            <p className="rule-eyebrow">How It Works</p>
-            <h2 className="mt-4 text-3xl md:text-4xl">Three ways to work with us.</h2>
-            <ol className="mt-10 space-y-8">
-              {[
-                ["Start free", "Book a phone consultation. Tell us the facility, the medical situation, and what you have tried so far."],
-                ["Pick a path", "After the Medical File Review, choose a single service or the Full-Service Package — no pressure either way."],
-                ["We stay with it", "We track deadlines, update you in plain language, and keep the release plan moving until your loved one is home."],
-              ].map(([title, body], i) => (
-                <li key={title} className="flex gap-5">
-                  <span className="font-display text-2xl text-accent">{i + 1}</span>
-                  <div>
-                    <h3 className="text-xl">{title}</h3>
-                    <p className="mt-1 text-base leading-relaxed text-muted-foreground">{body}</p>
-                  </div>
-                </li>
-              ))}
+        <section className="mx-auto max-w-4xl px-5 py-16">
+          <div className="rounded-sm bg-secondary/40 p-8">
+            <h2 className="text-3xl md:text-4xl">The Process</h2>
+            <ol className="mt-6 space-y-4 text-lg leading-relaxed text-muted-foreground">
+              <li><strong>1. Intake Call</strong> — Free 30-minute consultation to understand your loved one's situation.</li>
+              <li><strong>2. Medical File Review</strong> — We examine all available medical records and identify documentation gaps ($350).</li>
+              <li><strong>3. Assessment Summary</strong> — One-page summary of whether compassionate release has a reasonable chance.</li>
+              <li><strong>4. Decision & Contract</strong> — If moving forward, we draft a service agreement and begin full-service support.</li>
+              <li><strong>5. Documentation & Outreach</strong> — Medical documentation, legislative contact, and wraparound services planning.</li>
+              <li><strong>6. Court Support</strong> — We provide guidance through the compassionate release court proceedings.</li>
             </ol>
           </div>
         </section>
 
         <section className="mx-auto max-w-4xl px-5 py-16">
-          <h2 className="text-3xl md:text-4xl">Common questions.</h2>
-          <dl className="mt-10 space-y-8">
-            {faqs.map((faq) => (
-              <div key={faq.q}>
-                <dt className="text-lg font-semibold text-foreground">{faq.q}</dt>
-                <dd className="mt-2 text-base leading-relaxed text-muted-foreground">{faq.a}</dd>
-              </div>
-            ))}
-          </dl>
-        </section>
-
-        <section className="surface-warm">
-          <div className="mx-auto max-w-3xl px-5 py-16 text-center">
-            <h2 className="text-3xl md:text-4xl">Not sure which service fits?</h2>
-            <p className="mt-4 text-lg leading-relaxed text-ink-foreground/75">
-              Start with a free consultation. We'll tell you honestly what your loved one's case
-              needs — and what it doesn't.
+          <div className="rounded-sm bg-secondary/40 p-8">
+            <h2 className="text-3xl md:text-4xl">Ready to explore options?</h2>
+            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+              Call us for a free consultation. We'll listen to your situation and tell you honestly whether compassionate release is a viable path.
             </p>
-            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <Link
                 to="/intake"
                 className="inline-block rounded-sm bg-accent px-7 py-3 text-base font-semibold text-accent-foreground transition-opacity hover:opacity-90"
               >
-                Start a free case review
+                Start intake process
               </Link>
-              <a
-                href="mailto:revivifyfoundation@gmail.com"
+              
+                href="tel:+15102896801"
                 className="inline-block rounded-sm border border-ink-foreground/30 px-7 py-3 text-base font-semibold text-ink-foreground transition-colors hover:bg-ink-foreground/10"
               >
-                Email us instead
+                Call (510) 289-6801
               </a>
             </div>
           </div>
@@ -287,7 +212,7 @@ function Services() {
                   </a>
                 </p>
                 <p>
-                  <a
+                  
                     className="transition-colors hover:text-foreground"
                     href="mailto:revivifyfoundation@gmail.com"
                   >
