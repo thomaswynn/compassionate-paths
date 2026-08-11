@@ -152,7 +152,7 @@ function Services() {
 
         <section className="mx-auto max-w-4xl px-5 py-12">
           <img 
-            src="/before after white prisoner.jpg" 
+            src="/before_after_white_prisoner.jpg" 
             alt="Before and after compassionate release results"
             className="w-full rounded-lg shadow-lg"
           />
