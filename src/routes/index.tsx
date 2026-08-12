@@ -176,7 +176,7 @@ function Home() {
         <section id="what-we-do" className="mx-auto max-w-6xl px-5 py-20">
           <p className="rule-eyebrow">What We Do</p>
           <h2 className="mt-4 max-w-2xl text-3xl md:text-4xl">
-            Four kinds of help, from the first phone call to the ride home.
+            Six kinds of help, from the first phone call to the ride home.
           </h2>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
             The Revive Project, LLC provides compassionate release consulting and case support to
