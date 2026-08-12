@@ -78,7 +78,7 @@ function Resources() {
               The Revive Project document library.
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-ink-foreground/75">
-              Templates, fact sheets, advocacy letters, and guides pulled directly from our working
+              State Official Forms,(Medical Records release) templates, fact sheets, advocacy letters, and guides pulled directly from our working
               files. Open a document to read it, or download a copy to fill in for your own case.
               Client case files are private and never listed here.
             </p>
