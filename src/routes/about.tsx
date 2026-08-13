@@ -168,8 +168,11 @@ function About() {
           <dl className="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-5 py-12 md:grid-cols-4">
             {[
               ["39 years", "Lived experience inside"],
+      
               ["12 years", "Served as a law clerk"],
+      
               ["Founder", "Seniors Affairs Committee"],
+      
             ].map(([big, small]) => (
               <div key={small}>
                 <dt className="font-display text-3xl text-foreground">{big}</dt>
