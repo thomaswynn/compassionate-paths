@@ -17,8 +17,8 @@ export const Route = createFileRoute("/eligibility")({
 
 const criteria = [
   { title: "Age & Long Sentence", body: "You are 50 + years and have already served 20 + years OR 60+ years old and have already served 25+ years." },
-  { title: "Serious Medical Illness", body: "PC § 1172.2(b)(1) — Advanced Illness / End-of-Life Trajectory: Serious, advanced illness with an irreversible, declining trajectory, demonstrated by multi-system organ involvement (CKD, CAD, COPD) interacting dynamically with his cognitive and physical deterioration". },
-  { title: "ADA Limitations", body: "Crucially, total physical incapacitation or complete dependency is not required for compassionate release; rather, eligibility is established by the cumulative, compounding complications of his medical, mental, and mobility decline evaluated as a whole". },
+  { title: "Serious Medical Illness", body: "PC § 1172.2(b)(1) — Advanced Illness / End-of-Life Trajectory: Serious, advanced illness with an irreversible, declining trajectory, demonstrated by multi-system organ involvement (CKD, CAD, COPD) interacting dynamically with his cognitive and physical deterioration." },
+  { title: "ADA Limitations", body: "Crucially, total physical incapacitation or complete dependency is not required for compassionate release; rather, eligibility is established by the cumulative, compounding complications of his medical, mental, and mobility decline evaluated as a whole." },
   { title: "Low Risk to Public Safety", body: "You have no current gang affiliations, no violent history, and strong family or community ties." },
 ];
 
