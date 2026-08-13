@@ -170,7 +170,6 @@ function About() {
               ["39 years", "Lived experience inside"],
               ["12 years", "Served as a law clerk"],
               ["Founder", "Seniors Affairs Committee"],
-              ["20+ hours", "Argued against DA opposition"],
             ].map(([big, small]) => (
               <div key={small}>
                 <dt className="font-display text-3xl text-foreground">{big}</dt>
