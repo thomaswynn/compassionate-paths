@@ -171,7 +171,7 @@ function About() {
       
               ["12 years", "Served as a law clerk"],
       
-              ["Founder", "Seniors Affairs Committee"],
+              ["Founder", "Seniors Affairs & ADA Committee"],
       
             ].map(([big, small]) => (
               <div key={small}>
