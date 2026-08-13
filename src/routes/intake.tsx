@@ -258,7 +258,7 @@ function Intake() {
                 <section className="space-y-6">
                   <SectionHeading n="02" title="Health & accessibility" />
                   <Field
-                    label="ADA condition / disability *"
+                    label="ADA condition / disability (in basic description) *"
                     hint="Physical, sensory, cognitive, or mobility disabilities"
                     error={errors["adaCondition"]}
                   >
@@ -271,7 +271,7 @@ function Intake() {
                     />
                   </Field>
                   <Field
-                    label="Medical condition(s) *"
+                    label="Medical condition(s) (in general terms is fine) *"
                     hint="Diagnoses, treatments, and how the condition affects daily functioning"
                     error={errors["medicalCondition"]}
                   >
