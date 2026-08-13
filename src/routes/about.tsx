@@ -165,7 +165,7 @@ function About() {
         </section>
 
         <section className="border-b border-border bg-card">
-          <dl className="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-5 py-12 md:grid-cols-4">
+          <dl className="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-5 py-12 md:grid-cols-3">
             {[
               ["39 years", "Lived experience inside"],
       
