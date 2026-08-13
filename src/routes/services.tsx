@@ -17,7 +17,7 @@ export const Route = createFileRoute("/services")({
 
 const services = [
   { title: "Free Phone Consultation", description: "Discuss your loved one's case with our team. We review medical history, sentencing, and circumstances to assess eligibility." },
-  { title: "Medical File Review", description: "We examine existing medical records and identify gaps. $350 for comprehensive assessment.", price: "$350" },
+  { title: "Medical File Review", description: "We examine existing medical records upon reception and identify if your loved one qualifies buy meeting  the criteria for either ADA issuses or End of life trajectory. After a comprehensive assessment, we demonstrate through documentation whether they do or do not qualify, and what the next step ", price: "$400" },
   { title: "Medical Documentation", description: "Work with physicians to create detailed documentation connecting medical conditions to compassionate release criteria.", price: "$750–$1,200" },
   { title: "Legislative Outreach", description: "Contact state senators and assembly members to add your loved one to constituent watch lists.", price: "$500" },
   { title: "Wraparound Services", description: "Research community resources: transportation, IHSS (In-Home Supportive Services), hospice care planning.", price: "$600–$1,000" },
