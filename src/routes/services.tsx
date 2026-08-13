@@ -77,7 +77,7 @@ function Services() {
             <h2 className="text-3xl md:text-4xl">The Process</h2>
             <ol className="mt-6 space-y-4 text-lg leading-relaxed text-muted-foreground">
               <li><strong>1. Intake Call</strong> — Free 30-minute consultation to understand your loved one's situation.</li>
-              <li><strong>2. Medical File Review</strong> — We examine all available medical records and identify documentation gaps ($350).</li>
+              <li><strong>2. Medical File Review</strong> — We examine all available medical records and identify documentation gaps ($400).</li>
               <li><strong>3. Assessment Summary</strong> — One-page summary of whether compassionate release has a reasonable chance.</li>
               <li><strong>4. Decision & Contract</strong> — If moving forward, we draft a service agreement and begin full-service support.</li>
               <li><strong>5. Documentation & Outreach</strong> — Medical documentation, legislative contact, and wraparound services planning.</li>
