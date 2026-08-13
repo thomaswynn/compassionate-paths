@@ -132,7 +132,7 @@ function About() {
                 I spent thirty-nine years watching men suffer for no reason at all.
               </h1>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-foreground/75">
-                By the time a man turns forty inside, the argument that he is a danger to anyone has
+                By the time a man turns 65 inside, the argument that he is a danger to anyone has
                 usually run out. What is left is a body breaking down in a place that was never
                 built to care for it. I watched that happen for thirty-nine years, and I decided to
                 do something about it — first from the inside, and now from out here.
