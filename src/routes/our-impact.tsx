@@ -53,6 +53,9 @@ function OurImpact() {
             <Link className="text-foreground transition-colors" to="/our-impact">
               Our Impact
             </Link>
+            <Link className="transition-colors hover:text-foreground" to="/faq">
+              FAQ
+            </Link>
           </nav>
           <Link
             to="/intake"
@@ -118,10 +121,8 @@ function OurImpact() {
             <h2 className="text-2xl md:text-3xl">Every case starts the same way.</h2>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               A family calls us because someone they love is growing old or getting sicker inside
-              a California prison, and they don't know what options exist. We review the medical
-              records, identify the strongest pathway — compassionate release, medical parole, or
-              elderly parole — and build the case: the documentation, the legislative outreach, and
-              the release plan courts and agencies need to see before they'll say yes.
+              a California prison, and they do not know what options exist. We review the medical
+              records, identify the strongest pathway and build the case.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               Not every case ends this way. But when it does, it looks like this: someone who was
@@ -170,7 +171,7 @@ function OurImpact() {
               </div>
               <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
                 Re-entry and empowerment for elderly adults. We help California families navigate
-                compassionate release and medical parole — from the first medical record to the
+                compassionate release and medical parole from the first medical record to the
                 day someone comes home.
               </p>
             </div>
@@ -195,7 +196,7 @@ function OurImpact() {
                     revivifyfoundation@gmail.com
                   </a>
                 </p>
-                <p>Monday – Friday, 8:00 AM – 5:00 PM PT</p>
+                <p>Monday to Friday, 8:00 AM to 5:00 PM PT</p>
               </address>
             </div>
             <div>
@@ -232,6 +233,11 @@ function OurImpact() {
                   </Link>
                 </li>
                 <li>
+                  <Link className="transition-colors hover:text-foreground" to="/faq">
+                    FAQ
+                  </Link>
+                </li>
+                <li>
                   <Link className="transition-colors hover:text-foreground" to="/intake">
                     Start Intake
                   </Link>
@@ -240,7 +246,7 @@ function OurImpact() {
             </div>
           </div>
           <div className="mt-10 flex flex-col gap-2 border-t border-border pt-6 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
-            <p>© {new Date().getFullYear()} The Revive Project, LLC — California</p>
+            <p>2025 The Revive Project, LLC California</p>
             <p>Consulting and case support. Not a law firm; not legal or medical advice.</p>
           </div>
         </div>
