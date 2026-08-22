@@ -17,38 +17,38 @@ import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as ServicesRouteImport } from './routes/services'
 
 const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRouteImport,
+    id: '/',
+    path: '/',
+    getParentRoute: () => rootRouteImport,
 } as any)
 const EligibilityRoute = EligibilityRouteImport.update({
-  id: '/eligibility',
-  path: '/eligibility',
-  getParentRoute: () => rootRouteImport,
+    id: '/eligibility',
+    path: '/eligibility',
+    getParentRoute: () => rootRouteImport,
 } as any)
 const FaqRoute = FaqRouteImport.update({
-  id: '/faq',
-  path: '/faq',
-  getParentRoute: () => rootRouteImport,
+    id: '/faq',
+    path: '/faq',
+    getParentRoute: () => rootRouteImport,
 } as any)
 const IntakeRoute = IntakeRouteImport.update({
-  id: '/intake',
-  path: '/intake',
-  getParentRoute: () => rootRouteImport,
+    id: '/intake',
+    path: '/intake',
+    getParentRoute: () => rootRouteImport,
 } as any)
 const ResourcesRoute = ResourcesRouteImport.update({
-  id: '/resources',
-  path: '/resources',
-  getParentRoute: () => rootRouteImport,
+    id: '/resources',
+    path: '/resources',
+    getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesRoute = ServicesRouteImport.update({
-  id: '/services',
-  path: '/services',
-  getParentRoute: () => rootRouteImport,
+    id: '/services',
+    path: '/services',
+    getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
+    '/': typeof IndexRoute
   '/eligibility': typeof EligibilityRoute
   '/faq': typeof FaqRoute
   '/intake': typeof IntakeRoute
@@ -56,7 +56,7 @@ export interface FileRoutesByFullPath {
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
+    '/': typeof IndexRoute
   '/eligibility': typeof EligibilityRoute
   '/faq': typeof FaqRoute
   '/intake': typeof IntakeRoute
@@ -64,8 +64,8 @@ export interface FileRoutesByTo {
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesById {
-  __root__: typeof rootRouteImport
-  '/': typeof IndexRoute
+    __root__: typeof rootRouteImport
+    '/': typeof IndexRoute
   '/eligibility': typeof EligibilityRoute
   '/faq': typeof FaqRoute
   '/intake': typeof IntakeRoute
@@ -73,76 +73,76 @@ export interface FileRoutesById {
   '/services': typeof ServicesRoute
 }
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/eligibility' | '/faq' | '/intake' | '/resources' | '/services'
-  fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/eligibility' | '/faq' | '/intake' | '/resources' | '/services'
-  id: '__root__' | '/' | '/eligibility' | '/faq' | '/intake' | '/resources' | '/services'
-  fileRoutesById: FileRoutesById
+    fileRoutesByFullPath: FileRoutesByFullPath
+    fullPaths: '/' | '/eligibility' | '/faq' | '/intake' | '/resources' | '/services'
+    fileRoutesByTo: FileRoutesByTo
+    to: '/' | '/eligibility' | '/faq' | '/intake' | '/resources' | '/services'
+    id: '__root__' | '/' | '/eligibility' | '/faq' | '/intake' | '/resources' | '/services'
+    fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  EligibilityRoute: typeof EligibilityRoute
-  FaqRoute: typeof FaqRoute
-  IntakeRoute: typeof IntakeRoute
-  ResourcesRoute: typeof ResourcesRoute
-  ServicesRoute: typeof ServicesRoute
+    IndexRoute: typeof IndexRoute
+    EligibilityRoute: typeof EligibilityRoute
+    FaqRoute: typeof FaqRoute
+    IntakeRoute: typeof IntakeRoute
+    ResourcesRoute: typeof ResourcesRoute
+    ServicesRoute: typeof ServicesRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/eligibility': {
-      id: '/eligibility'
-      path: '/eligibility'
-      fullPath: '/eligibility'
-      preLoaderRoute: typeof EligibilityRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/faq': {
-      id: '/faq'
-      path: '/faq'
-      fullPath: '/faq'
-      preLoaderRoute: typeof FaqRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/intake': {
-      id: '/intake'
-      path: '/intake'
-      fullPath: '/intake'
-      preLoaderRoute: typeof IntakeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/resources': {
-      id: '/resources'
-      path: '/resources'
-      fullPath: '/resources'
-      preLoaderRoute: typeof ResourcesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
+        '/': {
+          id: '/'
+          path: '/'
+          fullPath: '/'
+          preLoaderRoute: typeof IndexRouteImport
+          parentRoute: typeof rootRouteImport
+  }
+      '/eligibility': {
+              id: '/eligibility'
+              path: '/eligibility'
+              fullPath: '/eligibility'
+              preLoaderRoute: typeof EligibilityRouteImport
+              parentRoute: typeof rootRouteImport
+      }
+      '/faq': {
+              id: '/faq'
+              path: '/faq'
+              fullPath: '/faq'
+              preLoaderRoute: typeof FaqRouteImport
+              parentRoute: typeof rootRouteImport
+      }
+      '/intake': {
+              id: '/intake'
+              path: '/intake'
+              fullPath: '/intake'
+              preLoaderRoute: typeof IntakeRouteImport
+              parentRoute: typeof rootRouteImport
+      }
+      '/resources': {
+              id: '/resources'
+              path: '/resources'
+              fullPath: '/resources'
+              preLoaderRoute: typeof ResourcesRouteImport
+              parentRoute: typeof rootRouteImport
+      }
     '/services': {
       id: '/services'
-      path: '/services'
-      fullPath: '/services'
-      preLoaderRoute: typeof ServicesRouteImport
-      parentRoute: typeof rootRouteImport
+            path: '/services'
+            fullPath: '/services'
+            preLoaderRoute: typeof ServicesRouteImport
+            parentRoute: typeof rootRouteImport
     }
-  }
+}
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
-  EligibilityRoute: EligibilityRoute,
-  FaqRoute: FaqRoute,
-  IntakeRoute: IntakeRoute,
-  ResourcesRoute: ResourcesRoute,
-  ServicesRoute: ServicesRoute,
+    IndexRoute: IndexRoute,
+    EligibilityRoute: EligibilityRoute,
+    FaqRoute: FaqRoute,
+    IntakeRoute: IntakeRoute,
+    ResourcesRoute: ResourcesRoute,
+    ServicesRoute: ServicesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
@@ -152,8 +152,8 @@ import type { getRouter } from './router.tsx'
 import type { startInstance } from './start.ts'
 declare module '@tanstack/react-start' {
   interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+        ssr: true
+        router: Awaited<ReturnType<typeof getRouter>>
+        config: Awaited<ReturnType<typeof startInstance.getOptions>>
   }
 }
