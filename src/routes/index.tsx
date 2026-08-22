@@ -98,6 +98,9 @@ function Home() {
             <Link className="transition-colors hover:text-foreground" to="/our-impact">
               Our Impact
             </Link>
+            <Link className="transition-colors hover:text-foreground" to="/faq">
+              FAQ
+            </Link>
           </nav>
           <Link
             to="/intake"
