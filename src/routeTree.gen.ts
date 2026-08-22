@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EligibilityRouteImport } from './routes/eligibility'
+import { Route as FaqRouteImport } from './routes/faq'
 import { Route as IntakeRouteImport } from './routes/intake'
 import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as ServicesRouteImport } from './routes/services'
@@ -23,6 +24,11 @@ const IndexRoute = IndexRouteImport.update({
 const EligibilityRoute = EligibilityRouteImport.update({
   id: '/eligibility',
   path: '/eligibility',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IntakeRoute = IntakeRouteImport.update({
@@ -44,6 +50,7 @@ const ServicesRoute = ServicesRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/eligibility': typeof EligibilityRoute
+  '/faq': typeof FaqRoute
   '/intake': typeof IntakeRoute
   '/resources': typeof ResourcesRoute
   '/services': typeof ServicesRoute
@@ -51,6 +58,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/eligibility': typeof EligibilityRoute
+  '/faq': typeof FaqRoute
   '/intake': typeof IntakeRoute
   '/resources': typeof ResourcesRoute
   '/services': typeof ServicesRoute
@@ -59,21 +67,23 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/eligibility': typeof EligibilityRoute
+  '/faq': typeof FaqRoute
   '/intake': typeof IntakeRoute
   '/resources': typeof ResourcesRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/eligibility' | '/intake' | '/resources' | '/services'
+  fullPaths: '/' | '/eligibility' | '/faq' | '/intake' | '/resources' | '/services'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/eligibility' | '/intake' | '/resources' | '/services'
-  id: '__root__' | '/' | '/eligibility' | '/intake' | '/resources' | '/services'
+  to: '/' | '/eligibility' | '/faq' | '/intake' | '/resources' | '/services'
+  id: '__root__' | '/' | '/eligibility' | '/faq' | '/intake' | '/resources' | '/services'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   EligibilityRoute: typeof EligibilityRoute
+  FaqRoute: typeof FaqRoute
   IntakeRoute: typeof IntakeRoute
   ResourcesRoute: typeof ResourcesRoute
   ServicesRoute: typeof ServicesRoute
@@ -93,6 +103,13 @@ declare module '@tanstack/react-router' {
       path: '/eligibility'
       fullPath: '/eligibility'
       preLoaderRoute: typeof EligibilityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/intake': {
@@ -122,6 +139,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   EligibilityRoute: EligibilityRoute,
+  FaqRoute: FaqRoute,
   IntakeRoute: IntakeRoute,
   ResourcesRoute: ResourcesRoute,
   ServicesRoute: ServicesRoute,
