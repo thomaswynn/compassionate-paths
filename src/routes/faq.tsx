@@ -1,5 +1,27 @@
 import { useState } from "react";
-import { Helmet } from "react-helmet-async";
+import { createFileRoute } from "@tanstack/react-router";
+
+export const Route = createFileRoute("/faq")({
+  head: () => ({
+    meta: [
+      { title: "Compassionate Release FAQ — California Medical Parole Help | The Revive Project" },
+      {
+        name: "description",
+        content:
+          "Answers to common questions about California compassionate release, CDCR medical parole eligibility, ADA accommodations for prisoners, and how The Revive Project can help your family.",
+      },
+      { property: "og:title", content: "Compassionate Release FAQ — California Medical Parole Help | The Revive Project" },
+      {
+        property: "og:description",
+        content:
+          "Answers to common questions about California compassionate release, CDCR medical parole eligibility, ADA accommodations for prisoners, and how The Revive Project can help your family.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: FAQ,
+});
 
 const faqs = [
   {
@@ -68,26 +90,17 @@ const faqSchema = {
   })),
 };
 
-export default function FAQ() {
+function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
 
   return (
     <>
-      <Helmet>
-        <title>
-          Compassionate Release FAQ — California Medical Parole Help | The
-          Revive Project
-        </title>
-        <meta
-          name="description"
-          content="Answers to common questions about California compassionate release, CDCR medical parole eligibility, ADA accommodations for prisoners, and how The Revive Project can help your family."
-        />
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
-      </Helmet>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
 
       <main style={{ maxWidth: "780px", margin: "0 auto", padding: "48px 24px" }}>
         <h1
