@@ -184,7 +184,7 @@ function Reentry() {
             </div>
             <div className="mt-8">
               
-                href="mailto:revivifyfoundation@gmail.com?subject=Reentry Readiness Checklist Request"
+                <a href="mailto:revivifyfoundation@gmail.com?subject=Reentry Readiness Checklist Request"
                 className="inline-block rounded-sm bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
               >
                 Request free checklist
