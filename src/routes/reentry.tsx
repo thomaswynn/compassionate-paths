@@ -183,8 +183,8 @@ function Reentry() {
               ))}
             </div>
             <div className="mt-8">
-              
-                <a href="mailto:revivifyfoundation@gmail.com?subject=Reentry Readiness Checklist Request"
+
+              <a href="mailto:revivifyfoundation@gmail.com?subject=Reentry Readiness Checklist Request"
                 className="inline-block rounded-sm bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
               >
                 Request free checklist
@@ -230,7 +230,7 @@ function Reentry() {
             <div>
               <p className="rule-eyebrow">Contact</p>
               <address className="mt-4 space-y-3 text-sm not-italic leading-relaxed text-muted-foreground">
-                <p>2509 Adeline St<br />Oakland, CA 94607</p>
+                <p>Serving families statewide across California</p>
                 <p><a className="transition-colors hover:text-foreground" href="tel:+15102896801">(510) 289-6801</a></p>
                 <p><a className="transition-colors hover:text-foreground" href="mailto:revivifyfoundation@gmail.com">revivifyfoundation@gmail.com</a></p>
                 <p>Monday – Friday, 8:00 AM – 5:00 PM PT</p>
