@@ -12,6 +12,39 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "The Revive Project, LLC",
+  "description": "Compassionate release and medical parole consulting in California. Not a law firm; does not provide legal or medical advice.",
+  "url": "https://revivifyfoundation.com",
+  "telephone": "+1-510-289-6801",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2509 Adeline St",
+    "addressLocality": "Oakland",
+    "addressRegion": "CA",
+    "postalCode": "94607",
+    "addressCountry": "US"
+  },
+  "areaServed": {
+    "@type": "State",
+    "name": "California"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "08:00",
+    "closes": "17:00"
+  },
+  "knowsAbout": [
+    "Compassionate release",
+    "Medical parole",
+    "California CDCR petitions",
+    "Elderly and terminally ill inmate advocacy"
+  ]
+};
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -98,7 +131,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
-
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -111,6 +143,10 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
       </head>
       <body>
         {children}
