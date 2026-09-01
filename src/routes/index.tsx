@@ -355,11 +355,7 @@ function Home() {
             <div>
               <p className="rule-eyebrow">Contact</p>
               <address className="mt-4 space-y-3 text-sm not-italic leading-relaxed text-muted-foreground">
-                <p>
-                  2509 Adeline St
-                  <br />
-                  Oakland, CA 94607
-                </p>
+                <p>Serving families statewide across California</p>
                 <p>
                   <a className="transition-colors hover:text-foreground" href="tel:+15102896801">
                     (510) 289-6801
