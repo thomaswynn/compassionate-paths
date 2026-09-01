@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import reviveLogo from "@/assets/revive Phoenix.png";
 import withOfficial from "@/assets/IMG_20251211_180525_775.jpg";
-import oaklandVolunteers from "@/assets/IMG_20260122_193644.jpg";
+import oaklandVolu nteers from "@/assets/IMG_20260122_193644.jpg";
 import capitolSteps from "../../IMG_20260423_091609_027.jpg";
 import summitPanel from "../../1000018914.jpg";
 import senatorMeeting from "../../Scott Wiener.png";
