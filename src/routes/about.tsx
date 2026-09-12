@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import reviveLogo from "@/assets/revive Phoenix.png";
 import withOfficial from "@/assets/IMG_20251211_180525_775.jpg";
-import oaklandVolu nteers from "@/assets/IMG_20260122_193644.jpg";
+import oaklandVolunteers from "@/assets/IMG_20260122_193644.jpg";
 import capitolSteps from "../../IMG_20260423_091609_027.jpg";
 import summitPanel from "../../1000018914.jpg";
 import senatorMeeting from "../../Scott Wiener.png";
@@ -113,7 +113,7 @@ function About() {
             <Link className="transition-colors hover:text-foreground" to="/our-impact">
               Our Impact
             </Link>
-          
+
             <Link className="transition-colors hover:text-foreground" to="/faq">
               FAQ
             </Link>
@@ -172,11 +172,11 @@ function About() {
           <dl className="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-5 py-12 md:grid-cols-3">
             {[
               ["39 years", "Lived experience inside"],
-      
+
               ["12 years", "Served as a law clerk"],
-      
+
               ["Founder", "Seniors Affairs & ADA Committee"],
-      
+
             ].map(([big, small]) => (
               <div key={small}>
                 <dt className="font-display text-3xl text-foreground">{big}</dt>
@@ -186,7 +186,7 @@ function About() {
           </dl>
         </section>
 
-                <section className="border-b border-border bg-background">
+        <section className="border-b border-border bg-background">
           <div className="mx-auto max-w-3xl px-5 py-20">
             <p className="rule-eyebrow">Personal Testimony</p>
             <h2 className="mt-4 max-w-2xl text-3xl md:text-4xl">
@@ -378,11 +378,7 @@ function About() {
             <div>
               <p className="rule-eyebrow">Contact</p>
               <address className="mt-4 space-y-3 text-sm not-italic leading-relaxed text-muted-foreground">
-                <p>
-                  2509 Adeline St
-                  <br />
-                  Oakland, CA 94607
-                </p>
+                <p>Serving families statewide across California</p>
                 <p>
                   <a className="transition-colors hover:text-foreground" href="tel:+15102896801">
                     (510) 289-6801
