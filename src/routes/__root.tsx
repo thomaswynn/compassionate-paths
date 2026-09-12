@@ -19,14 +19,6 @@ const organizationSchema = {
   "description": "Compassionate release and medical parole consulting in California. Not a law firm; does not provide legal or medical advice.",
   "url": "https://revivifyfoundation.com",
   "telephone": "+1-510-289-6801",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "2509 Adeline St",
-    "addressLocality": "Oakland",
-    "addressRegion": "CA",
-    "postalCode": "94607",
-    "addressCountry": "US"
-  },
   "areaServed": {
     "@type": "State",
     "name": "California"
