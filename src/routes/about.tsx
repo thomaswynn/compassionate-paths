@@ -222,8 +222,7 @@ function About() {
               <p>
                 The DA attacked the doctors' credibility. They used hyperbole to paint him as someone
                 faking his conditions, malingering for sympathy. The bitterness of his victims was
-                announced in open court: they wanted him to rot in prison. Twenty-five years later, I
-                still feel the weight of that fight.
+                announced in open court: they wanted him to rot in prison.
               </p>
               <p>
                 But Robert's case taught me something crucial: even if a man wins his compassionate
