@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[env]
+  [env.production]
+    SUBABASE_SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVmeW52bHNqdG13YnhvaXl0eGl1Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4Njk3MzczMiwiZXhwIjoyMTAyNTQ5NzMyfQ.AtYDNoA4Sev1zQ9zCAtLT54pKxufgwJ5HuA15KWX_3s"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
