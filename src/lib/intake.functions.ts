@@ -7,7 +7,7 @@ export const submitIntake = createServerFn({ method: "POST" })
   .inputValidator((data: unknown): IntakeInput => intakeSchema.parse(data))
   .handler(async ({ data }) => {
     const url = process.env["SUPABASE_URL"]!;
-    const key = process.env["SUPABASE_PUBLISHABLE_KEY"] ?? process.env["SUPABASE_ANON_KEY"]!;
+    const key = process.env["SUPABASE_SERVICE_ROLE_KEY"] ?? process.env["SUPABASE_ANON_KEY"]!;
 
     const supabasePublic = createClient<Database>(url, key, {
       auth: { storage: undefined, persistSession: false, autoRefreshToken: false },
