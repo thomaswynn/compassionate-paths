@@ -6,8 +6,8 @@ import { intakeSchema, type IntakeInput } from "./intake-schema";
 export const submitIntake = createServerFn({ method: "POST" })
   .inputValidator((data: unknown): IntakeInput => intakeSchema.parse(data))
   .handler(async ({ data }) => {
-    const url = process.env["SUPABASE_URL"]!;
-    const key = process.env["SUPABASE_SERVICE_ROLE_KEY"] ?? process.env["SUPABASE_ANON_KEY"] ?? "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVmeW52bHNqdG13YnhvaXl0eGl1Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4Njk3MzczMiwiZXhwIjoyMTAyNTQ5NzMyfQ.AtYDNoA4Sev1zQ9zCAtLT54pKxufgwJ5HuA15KWX_3s";
+    const url = process.env["SUPABASE_URL"] || "https://efynvlsjtmwbxoiytxiu.supabase.co";
+    const key = process.env["SUPABASE_SERVICE_ROLE_KEY"] || process.env["SUPABASE_ANON_KEY"] || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVmeW52bHNqdG13YnhvaXl0eGl1Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4Njk3MzczMiwiZXhwIjoyMTAyNTQ5NzMyfQ.AtYDNoA4Sev1zQ9zCAtLT54pKxufgwJ5HuA15KWX_3s";
 
     const supabasePublic = createClient<Database>(url, key, {
       auth: { storage: undefined, persistSession: false, autoRefreshToken: false },
@@ -46,13 +46,9 @@ export const submitIntake = createServerFn({ method: "POST" })
       throw new Error("We could not save your intake form. Please call (510) 289-6801.");
     }
 
-    // Let the family/client know their submission was received. This runs
-    // after the insert above succeeds, and a failure here should not block
-    // the form submission since the data was already saved.
     const resendApiKey = process.env["RESEND_API_KEY"];
     if (resendApiKey) {
       try {
-        // Send confirmation email to family
         await fetch("https://api.resend.com/emails", {
           method: "POST",
           headers: {
@@ -63,18 +59,10 @@ export const submitIntake = createServerFn({ method: "POST" })
             from: "The Revive Project <noreply@revivifyfoundation.com>",
             to: data.contactEmail,
             subject: "We received your intake form",
-            text: `Hi ${data.familyContactName},
-
-Thank you for submitting an intake form to The Revive Project on behalf of ${data.inmateFullName}. We've received your information, and someone from our team will be in touch within 1-2 business days.
-
-If you have any urgent questions in the meantime, you can reach us at (510) 289-6801.
-
-Thank you,
-The Revive Project`,
+            text: `Hi ${data.familyContactName},\n\nThank you for submitting an intake form to The Revive Project on behalf of ${data.inmateFullName}. We've received your information, and someone from our team will be in touch within 1-2 business days.\n\nIf you have any urgent questions in the meantime, you can reach us at (510) 289-6801.\n\nThank you,\nThe Revive Project`,
           }),
         });
 
-        // Send admin notification to Thomas
         await fetch("https://api.resend.com/emails", {
           method: "POST",
           headers: {
@@ -85,33 +73,7 @@ The Revive Project`,
             from: "The Revive Project <noreply@revivifyfoundation.com>",
             to: "thomaswynn.ca@gmail.com",
             subject: `New Intake: ${data.inmateFullName} (${data.cdcrNumber})`,
-            text: `New intake submission received.
-
-INMATE:
-Name: ${data.inmateFullName}
-CDCR #: ${data.cdcrNumber}
-Age: ${data.currentAge}
-DOB: ${data.dateOfBirth}
-Prison: ${data.prisonFacility}
-County: ${data.countyOfCommitment}
-
-FAMILY CONTACT:
-Name: ${data.familyContactName}
-Relationship: ${data.relationshipToInmate}
-Phone: ${data.contactPhone}
-Email: ${data.contactEmail}
-
-MEDICAL INFO:
-ADA Condition: ${data.adaCondition}
-Medical Condition: ${data.medicalCondition}
-
-ADDITIONAL NOTES:
-${data.additionalNotes || "(none)"}
-
-How they heard about us: ${data.heardAboutUs || "(not specified)"}
-
----
-Log in to your Supabase dashboard to view full details.`,
+            text: `New intake submission received.\n\nINMATE:\nName: ${data.inmateFullName}\nCDCR #: ${data.cdcrNumber}\nAge: ${data.currentAge}\nDOB: ${data.dateOfBirth}\nPrison: ${data.prisonFacility}\nCounty: ${data.countyOfCommitment}\n\nFAMILY CONTACT:\nName: ${data.familyContactName}\nRelationship: ${data.relationshipToInmate}\nPhone: ${data.contactPhone}\nEmail: ${data.contactEmail}\n\nMEDICAL INFO:\nADA Condition: ${data.adaCondition}\nMedical Condition: ${data.medicalCondition}\n\nADDITIONAL NOTES:\n${data.additionalNotes || "(none)"}\n\nHow they heard about us: ${data.heardAboutUs || "(not specified)"}`,
           }),
         });
       } catch (emailError) {
