@@ -52,6 +52,7 @@ export const submitIntake = createServerFn({ method: "POST" })
     const resendApiKey = process.env["RESEND_API_KEY"];
     if (resendApiKey) {
       try {
+        // Send confirmation email to family
         await fetch("https://api.resend.com/emails", {
           method: "POST",
           headers: {
@@ -72,8 +73,49 @@ Thank you,
 The Revive Project`,
           }),
         });
+
+        // Send admin notification to Thomas
+        await fetch("https://api.resend.com/emails", {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${resendApiKey}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            from: "The Revive Project <noreply@revivifyfoundation.com>",
+            to: "thomaswynn.ca@gmail.com",
+            subject: `New Intake: ${data.inmateFullName} (${data.cdcrNumber})`,
+            text: `New intake submission received.
+
+INMATE:
+Name: ${data.inmateFullName}
+CDCR #: ${data.cdcrNumber}
+Age: ${data.currentAge}
+DOB: ${data.dateOfBirth}
+Prison: ${data.prisonFacility}
+County: ${data.countyOfCommitment}
+
+FAMILY CONTACT:
+Name: ${data.familyContactName}
+Relationship: ${data.relationshipToInmate}
+Phone: ${data.contactPhone}
+Email: ${data.contactEmail}
+
+MEDICAL INFO:
+ADA Condition: ${data.adaCondition}
+Medical Condition: ${data.medicalCondition}
+
+ADDITIONAL NOTES:
+${data.additionalNotes || "(none)"}
+
+How they heard about us: ${data.heardAboutUs || "(not specified)"}
+
+---
+Log in to your Supabase dashboard to view full details.`,
+          }),
+        });
       } catch (emailError) {
-        console.error("Confirmation email failed to send", emailError);
+        console.error("Email notification failed", emailError);
       }
     }
 
