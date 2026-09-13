@@ -56,7 +56,7 @@ export const submitIntake = createServerFn({ method: "POST" })
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            from: "The Revive Project <noreply@revivifyfoundation.com>",
+            from: "The Revive Project <onboarding@resend.dev>",
             to: data.contactEmail,
             subject: "We received your intake form",
             text: `Hi ${data.familyContactName},\n\nThank you for submitting an intake form to The Revive Project on behalf of ${data.inmateFullName}. We've received your information, and someone from our team will be in touch within 1-2 business days.\n\nIf you have any urgent questions in the meantime, you can reach us at (510) 289-6801.\n\nThank you,\nThe Revive Project`,
@@ -70,7 +70,7 @@ export const submitIntake = createServerFn({ method: "POST" })
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            from: "The Revive Project <noreply@revivifyfoundation.com>",
+            from: "The Revive Project <onboarding@resend.dev>",
             to: "thomaswynn.ca@gmail.com",
             subject: `New Intake: ${data.inmateFullName} (${data.cdcrNumber})`,
             text: `New intake submission received.\n\nINMATE:\nName: ${data.inmateFullName}\nCDCR #: ${data.cdcrNumber}\nAge: ${data.currentAge}\nDOB: ${data.dateOfBirth}\nPrison: ${data.prisonFacility}\nCounty: ${data.countyOfCommitment}\n\nFAMILY CONTACT:\nName: ${data.familyContactName}\nRelationship: ${data.relationshipToInmate}\nPhone: ${data.contactPhone}\nEmail: ${data.contactEmail}\n\nMEDICAL INFO:\nADA Condition: ${data.adaCondition}\nMedical Condition: ${data.medicalCondition}\n\nADDITIONAL NOTES:\n${data.additionalNotes || "(none)"}\n\nHow they heard about us: ${data.heardAboutUs || "(not specified)"}`,
